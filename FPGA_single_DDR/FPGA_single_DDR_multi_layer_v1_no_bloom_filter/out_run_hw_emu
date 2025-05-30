@@ -1,0 +1,22 @@
+mkdir -p ./xclbin
+v++ -g -t hw_emu --platform xilinx_u250_gen3x16_xdma_4_1_202210_1 --save-temps --config connectivity.cfg -c -k vadd --temp_dir ./_x.hw_emu -o xclbin/vadd.hw_emu.xo src/vadd.cpp
+Option Map File Used: '/tools/Xilinx/Vitis/2022.1/data/vitis/vpp/optMap.xml'
+
+****** v++ v2022.1 (64-bit)
+  **** SW Build 3524075 on 2022-04-13-17:42:45
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+INFO: [v++ 60-1306] Additional information associated with this v++ compile can be found at:
+	Reports: /pub/scratch/wenqi/graph-vector-search-on-FPGA/first_trial/_x.hw_emu/reports/vadd.hw_emu
+	Log files: /pub/scratch/wenqi/graph-vector-search-on-FPGA/first_trial/_x.hw_emu/logs/vadd.hw_emu
+Running Dispatch Server on port: 42809
+INFO: [v++ 60-1548] Creating build summary session with primary output /pub/scratch/wenqi/graph-vector-search-on-FPGA/first_trial/xclbin/vadd.hw_emu.xo.compile_summary, at Tue Feb 20 07:46:40 2024
+INFO: [v++ 60-1316] Initiating connection to rulecheck server, at Tue Feb 20 07:46:40 2024
+INFO: [v++ 60-1315] Creating rulecheck session with output '/pub/scratch/wenqi/graph-vector-search-on-FPGA/first_trial/_x.hw_emu/reports/vadd.hw_emu/v++_compile_vadd.hw_emu_guidance.html', at Tue Feb 20 07:46:42 2024
+INFO: [v++ 60-895]   Target platform: /opt/xilinx/platforms/xilinx_u250_gen3x16_xdma_4_1_202210_1/xilinx_u250_gen3x16_xdma_4_1_202210_1.xpfm
+INFO: [v++ 60-1578]   This platform contains Xilinx Shell Archive '/opt/xilinx/platforms/xilinx_u250_gen3x16_xdma_4_1_202210_1/hw/hw.xsa'
+INFO: [v++ 74-78] Compiler Version string: 2022.1
+INFO: [v++ 60-585] Compiling for hardware emulation target
+INFO: [v++ 60-423]   Target device: xilinx_u250_gen3x16_xdma_4_1_202210_1
+INFO: [v++ 60-242] Creating kernel: 'vadd'
+INFO: [v++ 60-1616] Creating a HLS clock using kernel_frequency option: 140 MHz

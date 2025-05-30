@@ -1,0 +1,13 @@
+mkdir -p ./xclbin
+v++ -g -t hw_emu --platform xilinx_u250_gen3x16_xdma_4_1_202210_1 --save-temps --config connectivity.cfg -l --temp_dir ./_x.hw_emu -o xclbin/vadd.hw_emu.xclbin xclbin/vadd.hw_emu.xo # 
+Option Map File Used: '/tools/Xilinx/Vitis/2023.1/data/vitis/vpp/optMap.xml'
+
+****** v++ v2023.1 (64-bit)
+  **** SW Build 3860322 on 2023-05-04-06:32:48
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+ERROR: [v++ 60-610] Unable to remove existing project: ./_x.hw_emu/link
+INFO: [v++ 60-1662] Stopping dispatch session having empty uuid.
+INFO: [v++ 60-1653] Closing dispatch client.
+make: *** [Makefile:82: xclbin/vadd.hw_emu.xclbin] Error 1

@@ -1,0 +1,55 @@
+mkdir -p ./xclbin
+v++ -g -t hw_emu --platform xilinx_u250_gen3x16_xdma_4_1_202210_1 --save-temps --config connectivity.cfg -c -k vadd --temp_dir ./_x.hw_emu -o xclbin/vadd.hw_emu.xo src/vadd.cpp
+Option Map File Used: '/tools/Xilinx/Vitis/2022.1/data/vitis/vpp/optMap.xml'
+
+****** v++ v2022.1 (64-bit)
+  **** SW Build 3524075 on 2022-04-13-17:42:45
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+INFO: [v++ 60-1306] Additional information associated with this v++ compile can be found at:
+	Reports: /pub/scratch/wenqi/graph-vector-search-on-FPGA/unit_tests/compute_PE/float_operation_perf_microbench/_x.hw_emu/reports/vadd.hw_emu
+	Log files: /pub/scratch/wenqi/graph-vector-search-on-FPGA/unit_tests/compute_PE/float_operation_perf_microbench/_x.hw_emu/logs/vadd.hw_emu
+Running Dispatch Server on port: 44369
+INFO: [v++ 60-1548] Creating build summary session with primary output /pub/scratch/wenqi/graph-vector-search-on-FPGA/unit_tests/compute_PE/float_operation_perf_microbench/xclbin/vadd.hw_emu.xo.compile_summary, at Mon Feb 26 15:50:08 2024
+INFO: [v++ 60-1316] Initiating connection to rulecheck server, at Mon Feb 26 15:50:08 2024
+INFO: [v++ 60-1315] Creating rulecheck session with output '/pub/scratch/wenqi/graph-vector-search-on-FPGA/unit_tests/compute_PE/float_operation_perf_microbench/_x.hw_emu/reports/vadd.hw_emu/v++_compile_vadd.hw_emu_guidance.html', at Mon Feb 26 15:50:10 2024
+INFO: [v++ 60-895]   Target platform: /opt/xilinx/platforms/xilinx_u250_gen3x16_xdma_4_1_202210_1/xilinx_u250_gen3x16_xdma_4_1_202210_1.xpfm
+INFO: [v++ 60-1578]   This platform contains Xilinx Shell Archive '/opt/xilinx/platforms/xilinx_u250_gen3x16_xdma_4_1_202210_1/hw/hw.xsa'
+INFO: [v++ 74-78] Compiler Version string: 2022.1
+INFO: [v++ 60-585] Compiling for hardware emulation target
+INFO: [v++ 60-423]   Target device: xilinx_u250_gen3x16_xdma_4_1_202210_1
+INFO: [v++ 60-242] Creating kernel: 'vadd'
+INFO: [v++ 60-1616] Creating a HLS clock using kernel_frequency option: 200 MHz
+
+===>The following messages were generated while  performing high-level synthesis for kernel: vadd Log file: /pub/scratch/wenqi/graph-vector-search-on-FPGA/unit_tests/compute_PE/float_operation_perf_microbench/_x.hw_emu/vadd.hw_emu/vadd/vitis_hls.log :
+INFO: [v++ 204-61] Pipelining loop 'VITIS_LOOP_129_1'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 3, loop 'VITIS_LOOP_129_1'
+INFO: [v++ 204-61] Pipelining loop 'ADD_LOOP'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 8, loop 'ADD_LOOP'
+INFO: [v++ 204-61] Pipelining loop 'MULT_LOOP'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 5, loop 'MULT_LOOP'
+INFO: [v++ 204-61] Pipelining loop 'VITIS_LOOP_154_2'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 3, loop 'VITIS_LOOP_154_2'
+INFO: [v++ 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+INFO: [v++ 200-789] **** Estimated Fmax: 273.97 MHz
+INFO: [v++ 60-594] Finished kernel compilation
+INFO: [v++ 60-244] Generating system estimate report...
+INFO: [v++ 60-1092] Generated system estimate report: /pub/scratch/wenqi/graph-vector-search-on-FPGA/unit_tests/compute_PE/float_operation_perf_microbench/_x.hw_emu/reports/vadd.hw_emu/system_estimate_vadd.hw_emu.xtxt
+WARNING: [v++-17-1525]  
+INFO: [v++ 60-586] Created xclbin/vadd.hw_emu.xo
+INFO: [v++ 60-2343] Use the vitis_analyzer tool to visualize and navigate the relevant reports. Run the following command. 
+    vitis_analyzer /pub/scratch/wenqi/graph-vector-search-on-FPGA/unit_tests/compute_PE/float_operation_perf_microbench/xclbin/vadd.hw_emu.xo.compile_summary 
+INFO: [v++ 60-791] Total elapsed time: 0h 1m 16s
+INFO: [v++ 60-1653] Closing dispatch client.
+mkdir -p ./xclbin
+v++ -g -t hw_emu --platform xilinx_u250_gen3x16_xdma_4_1_202210_1 --save-temps --config connectivity.cfg -l --temp_dir ./_x.hw_emu -o xclbin/vadd.hw_emu.xclbin xclbin/vadd.hw_emu.xo # 
+Option Map File Used: '/tools/Xilinx/Vitis/2022.1/data/vitis/vpp/optMap.xml'
+
+****** v++ v2022.1 (64-bit)
+  **** SW Build 3524075 on 2022-04-13-17:42:45
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+INFO: [v++ 60-1306] Additional information associated with this v++ link can be found at:
+	Reports: /pub/scratch/wenqi/graph-vector-search-on-FPGA/unit_tests/compute_PE/float_operation_perf_microbench/_x.hw_emu/reports/link
+	Log files: /pub/scratch/wenqi/graph-vector-search-on-FPGA/unit_tests/compute_PE/float_operation_perf_microbench/_x.hw_emu/logs/link
+make: *** [Makefile:82: xclbin/vadd.hw_emu.xclbin] Interrupt

@@ -1,0 +1,165 @@
+mkdir -p ./xclbin
+v++ -g -t hw_emu --platform xilinx_u250_gen3x16_xdma_4_1_202210_1 --save-temps --config connectivity.cfg -c -k vadd --temp_dir ./_x.hw_emu -o xclbin/vadd.hw_emu.xo src/vadd.cpp
+Option Map File Used: '/tools/Xilinx/Vitis/2022.1/data/vitis/vpp/optMap.xml'
+
+****** v++ v2022.1 (64-bit)
+  **** SW Build 3524075 on 2022-04-13-17:42:45
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+INFO: [v++ 60-1306] Additional information associated with this v++ compile can be found at:
+	Reports: /pub/scratch/wenqi/graph-vector-search-on-FPGA/unit_tests/priority_queue/_x.hw_emu/reports/vadd.hw_emu
+	Log files: /pub/scratch/wenqi/graph-vector-search-on-FPGA/unit_tests/priority_queue/_x.hw_emu/logs/vadd.hw_emu
+Running Dispatch Server on port: 43441
+INFO: [v++ 60-1548] Creating build summary session with primary output /pub/scratch/wenqi/graph-vector-search-on-FPGA/unit_tests/priority_queue/xclbin/vadd.hw_emu.xo.compile_summary, at Tue Feb 20 15:45:14 2024
+INFO: [v++ 60-1316] Initiating connection to rulecheck server, at Tue Feb 20 15:45:14 2024
+INFO: [v++ 60-1315] Creating rulecheck session with output '/pub/scratch/wenqi/graph-vector-search-on-FPGA/unit_tests/priority_queue/_x.hw_emu/reports/vadd.hw_emu/v++_compile_vadd.hw_emu_guidance.html', at Tue Feb 20 15:45:15 2024
+INFO: [v++ 60-895]   Target platform: /opt/xilinx/platforms/xilinx_u250_gen3x16_xdma_4_1_202210_1/xilinx_u250_gen3x16_xdma_4_1_202210_1.xpfm
+INFO: [v++ 60-1578]   This platform contains Xilinx Shell Archive '/opt/xilinx/platforms/xilinx_u250_gen3x16_xdma_4_1_202210_1/hw/hw.xsa'
+INFO: [v++ 74-78] Compiler Version string: 2022.1
+INFO: [v++ 60-585] Compiling for hardware emulation target
+INFO: [v++ 60-423]   Target device: xilinx_u250_gen3x16_xdma_4_1_202210_1
+INFO: [v++ 60-242] Creating kernel: 'vadd'
+INFO: [v++ 60-1616] Creating a HLS clock using kernel_frequency option: 200 MHz
+
+===>The following messages were generated while  performing high-level synthesis for kernel: vadd Log file: /pub/scratch/wenqi/graph-vector-search-on-FPGA/unit_tests/priority_queue/_x.hw_emu/vadd.hw_emu/vadd/vitis_hls.log :
+INFO: [v++ 204-61] Pipelining loop 'VITIS_LOOP_18_1'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 3, loop 'VITIS_LOOP_18_1'
+INFO: [v++ 204-61] Pipelining loop 'VITIS_LOOP_26_3'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'VITIS_LOOP_26_3'
+INFO: [v++ 204-61] Pipelining loop 'VITIS_LOOP_89_1'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 2, Depth = 5, loop 'VITIS_LOOP_89_1'
+INFO: [v++ 204-61] Pipelining loop 'VITIS_LOOP_57_2'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'VITIS_LOOP_57_2'
+INFO: [v++ 204-61] Pipelining loop 'VITIS_LOOP_62_3'.
+INFO: [v++ 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 3, loop 'VITIS_LOOP_62_3'
+INFO: [v++ 204-61] Pipelining loop 'VITIS_LOOP_77_1'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 3, loop 'VITIS_LOOP_77_1'
+INFO: [v++ 204-61] Pipelining loop 'VITIS_LOOP_84_2'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 7, loop 'VITIS_LOOP_84_2'
+INFO: [v++ 204-61] Pipelining loop 'VITIS_LOOP_90_3'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'VITIS_LOOP_90_3'
+INFO: [v++ 200-790] **** Loop Constraint Status: All loop constraints were NOT satisfied.
+INFO: [v++ 200-789] **** Estimated Fmax: 247.89 MHz
+INFO: [v++ 60-594] Finished kernel compilation
+INFO: [v++ 60-244] Generating system estimate report...
+INFO: [v++ 60-1092] Generated system estimate report: /pub/scratch/wenqi/graph-vector-search-on-FPGA/unit_tests/priority_queue/_x.hw_emu/reports/vadd.hw_emu/system_estimate_vadd.hw_emu.xtxt
+INFO: [v++ 60-586] Created xclbin/vadd.hw_emu.xo
+INFO: [v++ 60-2343] Use the vitis_analyzer tool to visualize and navigate the relevant reports. Run the following command. 
+    vitis_analyzer /pub/scratch/wenqi/graph-vector-search-on-FPGA/unit_tests/priority_queue/xclbin/vadd.hw_emu.xo.compile_summary 
+INFO: [v++ 60-791] Total elapsed time: 0h 4m 17s
+INFO: [v++ 60-1653] Closing dispatch client.
+mkdir -p ./xclbin
+v++ -g -t hw_emu --platform xilinx_u250_gen3x16_xdma_4_1_202210_1 --save-temps --config connectivity.cfg -l --temp_dir ./_x.hw_emu -o xclbin/vadd.hw_emu.xclbin xclbin/vadd.hw_emu.xo # 
+Option Map File Used: '/tools/Xilinx/Vitis/2022.1/data/vitis/vpp/optMap.xml'
+
+****** v++ v2022.1 (64-bit)
+  **** SW Build 3524075 on 2022-04-13-17:42:45
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+INFO: [v++ 60-1306] Additional information associated with this v++ link can be found at:
+	Reports: /pub/scratch/wenqi/graph-vector-search-on-FPGA/unit_tests/priority_queue/_x.hw_emu/reports/link
+	Log files: /pub/scratch/wenqi/graph-vector-search-on-FPGA/unit_tests/priority_queue/_x.hw_emu/logs/link
+Running Dispatch Server on port: 38215
+INFO: [v++ 60-1548] Creating build summary session with primary output /pub/scratch/wenqi/graph-vector-search-on-FPGA/unit_tests/priority_queue/xclbin/vadd.hw_emu.xclbin.link_summary, at Tue Feb 20 15:49:33 2024
+INFO: [v++ 60-1316] Initiating connection to rulecheck server, at Tue Feb 20 15:49:33 2024
+INFO: [v++ 60-1315] Creating rulecheck session with output '/pub/scratch/wenqi/graph-vector-search-on-FPGA/unit_tests/priority_queue/_x.hw_emu/reports/link/v++_link_vadd.hw_emu_guidance.html', at Tue Feb 20 15:49:35 2024
+INFO: [v++ 60-895]   Target platform: /opt/xilinx/platforms/xilinx_u250_gen3x16_xdma_4_1_202210_1/xilinx_u250_gen3x16_xdma_4_1_202210_1.xpfm
+INFO: [v++ 60-1578]   This platform contains Xilinx Shell Archive '/opt/xilinx/platforms/xilinx_u250_gen3x16_xdma_4_1_202210_1/hw_emu/hw_emu.xsa'
+INFO: [v++ 74-78] Compiler Version string: 2022.1
+INFO: [v++ 60-629] Linking for hardware emulation target
+INFO: [v++ 60-423]   Target device: xilinx_u250_gen3x16_xdma_4_1_202210_1
+INFO: [v++ 60-1332] Run 'run_link' status: Not started
+INFO: [v++ 60-1443] [15:49:43] Run run_link: Step system_link: Started
+INFO: [v++ 60-1453] Command Line: system_link --xo /pub/scratch/wenqi/graph-vector-search-on-FPGA/unit_tests/priority_queue/xclbin/vadd.hw_emu.xo -keep --config /pub/scratch/wenqi/graph-vector-search-on-FPGA/unit_tests/priority_queue/_x.hw_emu/link/int/syslinkConfig.ini --xpfm /opt/xilinx/platforms/xilinx_u250_gen3x16_xdma_4_1_202210_1/xilinx_u250_gen3x16_xdma_4_1_202210_1.xpfm --target emu --output_dir /pub/scratch/wenqi/graph-vector-search-on-FPGA/unit_tests/priority_queue/_x.hw_emu/link/int --temp_dir /pub/scratch/wenqi/graph-vector-search-on-FPGA/unit_tests/priority_queue/_x.hw_emu/link/sys_link
+INFO: [v++ 60-1454] Run Directory: /pub/scratch/wenqi/graph-vector-search-on-FPGA/unit_tests/priority_queue/_x.hw_emu/link/run_link
+INFO: [SYSTEM_LINK 60-1316] Initiating connection to rulecheck server, at Tue Feb 20 15:49:45 2024
+INFO: [SYSTEM_LINK 82-70] Extracting xo v3 file /pub/scratch/wenqi/graph-vector-search-on-FPGA/unit_tests/priority_queue/xclbin/vadd.hw_emu.xo
+INFO: [SYSTEM_LINK 82-53] Creating IP database /pub/scratch/wenqi/graph-vector-search-on-FPGA/unit_tests/priority_queue/_x.hw_emu/link/sys_link/_sysl/.cdb/xd_ip_db.xml
+INFO: [SYSTEM_LINK 82-38] [15:49:49] build_xd_ip_db started: /tools/Xilinx/Vitis/2022.1/bin/build_xd_ip_db -ip_search 0  -sds-pf /pub/scratch/wenqi/graph-vector-search-on-FPGA/unit_tests/priority_queue/_x.hw_emu/link/sys_link/hw_emu.hpfm -clkid 0 -ip /pub/scratch/wenqi/graph-vector-search-on-FPGA/unit_tests/priority_queue/_x.hw_emu/link/sys_link/iprepo/xilinx_com_hls_vadd_1_0,vadd -o /pub/scratch/wenqi/graph-vector-search-on-FPGA/unit_tests/priority_queue/_x.hw_emu/link/sys_link/_sysl/.cdb/xd_ip_db.xml
+INFO: [SYSTEM_LINK 82-37] [15:49:56] build_xd_ip_db finished successfully
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 2269.578 ; gain = 0.000 ; free physical = 218464 ; free virtual = 331683
+INFO: [SYSTEM_LINK 82-51] Create system connectivity graph
+INFO: [SYSTEM_LINK 82-102] Applying explicit connections to the system connectivity graph: /pub/scratch/wenqi/graph-vector-search-on-FPGA/unit_tests/priority_queue/_x.hw_emu/link/sys_link/cfgraph/cfgen_cfgraph.xml
+INFO: [SYSTEM_LINK 82-38] [15:49:56] cfgen started: /tools/Xilinx/Vitis/2022.1/bin/cfgen  -nk vadd:1:vadd_1 -sp vadd_1.input_array:DDR[0] -sp vadd_1.sorted_array:DDR[0] -dmclkid 0 -r /pub/scratch/wenqi/graph-vector-search-on-FPGA/unit_tests/priority_queue/_x.hw_emu/link/sys_link/_sysl/.cdb/xd_ip_db.xml -o /pub/scratch/wenqi/graph-vector-search-on-FPGA/unit_tests/priority_queue/_x.hw_emu/link/sys_link/cfgraph/cfgen_cfgraph.xml
+INFO: [CFGEN 83-0] Kernel Specs: 
+INFO: [CFGEN 83-0]   kernel: vadd, num: 1  {vadd_1}
+INFO: [CFGEN 83-0] Port Specs: 
+INFO: [CFGEN 83-0]   kernel: vadd_1, k_port: input_array, sptag: DDR[0]
+INFO: [CFGEN 83-0]   kernel: vadd_1, k_port: sorted_array, sptag: DDR[0]
+INFO: [SYSTEM_LINK 82-37] [15:50:03] cfgen finished successfully
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2269.578 ; gain = 0.000 ; free physical = 217523 ; free virtual = 330741
+INFO: [SYSTEM_LINK 82-52] Create top-level block diagram
+INFO: [SYSTEM_LINK 82-38] [15:50:03] cf2bd started: /tools/Xilinx/Vitis/2022.1/bin/cf2bd  --linux --trace_buffer 1024 --input_file /pub/scratch/wenqi/graph-vector-search-on-FPGA/unit_tests/priority_queue/_x.hw_emu/link/sys_link/cfgraph/cfgen_cfgraph.xml --ip_db /pub/scratch/wenqi/graph-vector-search-on-FPGA/unit_tests/priority_queue/_x.hw_emu/link/sys_link/_sysl/.cdb/xd_ip_db.xml --cf_name dr --working_dir /pub/scratch/wenqi/graph-vector-search-on-FPGA/unit_tests/priority_queue/_x.hw_emu/link/sys_link/_sysl/.xsd --temp_dir /pub/scratch/wenqi/graph-vector-search-on-FPGA/unit_tests/priority_queue/_x.hw_emu/link/sys_link --output_dir /pub/scratch/wenqi/graph-vector-search-on-FPGA/unit_tests/priority_queue/_x.hw_emu/link/int
+INFO: [CF2BD 82-31] Launching cf2xd: cf2xd -linux -trace-buffer 1024 -i /pub/scratch/wenqi/graph-vector-search-on-FPGA/unit_tests/priority_queue/_x.hw_emu/link/sys_link/cfgraph/cfgen_cfgraph.xml -r /pub/scratch/wenqi/graph-vector-search-on-FPGA/unit_tests/priority_queue/_x.hw_emu/link/sys_link/_sysl/.cdb/xd_ip_db.xml -o dr.xml
+INFO: [CF2BD 82-28] cf2xd finished successfully
+INFO: [CF2BD 82-31] Launching cf_xsd: cf_xsd -disable-address-gen -dn dr -dp /pub/scratch/wenqi/graph-vector-search-on-FPGA/unit_tests/priority_queue/_x.hw_emu/link/sys_link/_sysl/.xsd
+INFO: [CF2BD 82-28] cf_xsd finished successfully
+INFO: [SYSTEM_LINK 82-37] [15:50:07] cf2bd finished successfully
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 2269.578 ; gain = 0.000 ; free physical = 216471 ; free virtual = 329696
+INFO: [v++ 60-1441] [15:50:07] Run run_link: Step system_link: Completed
+Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 2208.363 ; gain = 0.000 ; free physical = 216497 ; free virtual = 329722
+INFO: [v++ 60-1443] [15:50:07] Run run_link: Step cf2sw: Started
+INFO: [v++ 60-1453] Command Line: cf2sw -sdsl /pub/scratch/wenqi/graph-vector-search-on-FPGA/unit_tests/priority_queue/_x.hw_emu/link/int/sdsl.dat -rtd /pub/scratch/wenqi/graph-vector-search-on-FPGA/unit_tests/priority_queue/_x.hw_emu/link/int/cf2sw.rtd -nofilter /pub/scratch/wenqi/graph-vector-search-on-FPGA/unit_tests/priority_queue/_x.hw_emu/link/int/cf2sw_full.rtd -xclbin /pub/scratch/wenqi/graph-vector-search-on-FPGA/unit_tests/priority_queue/_x.hw_emu/link/int/xclbin_orig.xml -o /pub/scratch/wenqi/graph-vector-search-on-FPGA/unit_tests/priority_queue/_x.hw_emu/link/int/xclbin_orig.1.xml
+INFO: [v++ 60-1454] Run Directory: /pub/scratch/wenqi/graph-vector-search-on-FPGA/unit_tests/priority_queue/_x.hw_emu/link/run_link
+INFO: [v++ 60-1441] [15:50:12] Run run_link: Step cf2sw: Completed
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2208.363 ; gain = 0.000 ; free physical = 216689 ; free virtual = 329917
+INFO: [v++ 60-1443] [15:50:12] Run run_link: Step rtd2_system_diagram: Started
+INFO: [v++ 60-1453] Command Line: rtd2SystemDiagram
+INFO: [v++ 60-1454] Run Directory: /pub/scratch/wenqi/graph-vector-search-on-FPGA/unit_tests/priority_queue/_x.hw_emu/link/run_link
+INFO: [v++ 60-1441] [15:50:12] Run run_link: Step rtd2_system_diagram: Completed
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.5 . Memory (MB): peak = 2208.363 ; gain = 0.000 ; free physical = 216703 ; free virtual = 329931
+INFO: [v++ 60-1443] [15:50:12] Run run_link: Step vpl: Started
+INFO: [v++ 60-1453] Command Line: vpl -t hw_emu -f xilinx_u250_gen3x16_xdma_4_1_202210_1 -g --kernel_frequency 200 --remote_ip_cache /pub/scratch/wenqi/graph-vector-search-on-FPGA/unit_tests/priority_queue/.ipcache -s --output_dir /pub/scratch/wenqi/graph-vector-search-on-FPGA/unit_tests/priority_queue/_x.hw_emu/link/int --log_dir /pub/scratch/wenqi/graph-vector-search-on-FPGA/unit_tests/priority_queue/_x.hw_emu/logs/link --report_dir /pub/scratch/wenqi/graph-vector-search-on-FPGA/unit_tests/priority_queue/_x.hw_emu/reports/link --config /pub/scratch/wenqi/graph-vector-search-on-FPGA/unit_tests/priority_queue/_x.hw_emu/link/int/vplConfig.ini -k /pub/scratch/wenqi/graph-vector-search-on-FPGA/unit_tests/priority_queue/_x.hw_emu/link/int/kernel_info.dat --webtalk_flag Vitis --temp_dir /pub/scratch/wenqi/graph-vector-search-on-FPGA/unit_tests/priority_queue/_x.hw_emu/link --emulation_mode debug_waveform --no-info --iprepo /pub/scratch/wenqi/graph-vector-search-on-FPGA/unit_tests/priority_queue/_x.hw_emu/link/int/xo/ip_repo/xilinx_com_hls_vadd_1_0 --messageDb /pub/scratch/wenqi/graph-vector-search-on-FPGA/unit_tests/priority_queue/_x.hw_emu/link/run_link/vpl.pb /pub/scratch/wenqi/graph-vector-search-on-FPGA/unit_tests/priority_queue/_x.hw_emu/link/int/dr.bd.tcl
+INFO: [v++ 60-1454] Run Directory: /pub/scratch/wenqi/graph-vector-search-on-FPGA/unit_tests/priority_queue/_x.hw_emu/link/run_link
+
+****** vpl v2022.1 (64-bit)
+  **** SW Build 3524075 on 2022-04-13-17:42:45
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+INFO: [VPL 60-839] Read in kernel information from file '/pub/scratch/wenqi/graph-vector-search-on-FPGA/unit_tests/priority_queue/_x.hw_emu/link/int/kernel_info.dat'.
+INFO: [VPL 74-78] Compiler Version string: 2022.1
+INFO: [VPL 60-423]   Target device: xilinx_u250_gen3x16_xdma_4_1_202210_1
+INFO: [VPL 60-1032] Extracting hardware platform to /pub/scratch/wenqi/graph-vector-search-on-FPGA/unit_tests/priority_queue/_x.hw_emu/link/vivado/vpl/.local/hw_platform
+[15:51:00] Run vpl: Step create_project: Started
+Creating Vivado project.
+[15:52:17] Run vpl: Step create_project: RUNNING...
+[15:52:41] Run vpl: Step create_project: Completed
+[15:52:41] Run vpl: Step create_bd: Started
+[15:53:02] Run vpl: Step create_bd: Completed
+[15:53:02] Run vpl: Step update_bd: Started
+[15:53:08] Run vpl: Step update_bd: Completed
+[15:53:08] Run vpl: Step generate_target: Started
+[15:54:31] Run vpl: Step generate_target: RUNNING...
+[15:55:43] Run vpl: Step generate_target: Failed
+[15:55:46] Run vpl: FINISHED. Run Status: generate_target ERROR
+
+===>The following messages were generated while  running Vivado to generate simulation models and scripts. Log file: /pub/scratch/wenqi/graph-vector-search-on-FPGA/unit_tests/priority_queue/_x.hw_emu/link/vivado/vpl/runme.log :
+ERROR: [VPL 64-4] /pub/scratch/wenqi/graph-vector-search-on-FPGA/unit_tests/priority_queue/_x.hw_emu/link/vivado/vpl/prj/prj.gen/sources_1/bd/pfm_dynamic/ip/pfm_dynamic_memory_subsystem_0/bd_1/synth/bd_d216_interconnect_DDR4_MEM00_0.hwdef is not valid Hardware Handoff File
+ERROR: [VPL 60-773] In '/pub/scratch/wenqi/graph-vector-search-on-FPGA/unit_tests/priority_queue/_x.hw_emu/link/vivado/vpl/vivado.log', caught Tcl error:  ERROR: [Common 17-39] 'write_hwdef' failed due to earlier errors.
+WARNING: [VPL 60-732] Link warning: IP pfm_top_axi_clock_converter_0_0 is locked. Locked reason: * The IP Data in the repository is incompatible with the current instance (despite having identical Version and Revision). You will need to upgrade the IP before viewing the customization and generating outputs.
+WARNING: [VPL 60-732] Link warning: .
+WARNING: [VPL 60-732] Link warning: IP pfm_top_smartconnect_0_0 is locked. Locked reason: * The IP Data in the repository is incompatible with the current instance (despite having identical Version and Revision). You will need to upgrade the IP before viewing the customization and generating outputs.
+WARNING: [VPL 60-732] Link warning: * IP 'pfm_top_smartconnect_0_0' contains one or more locked subcores.* Please upgrade the IP.
+WARNING: [VPL 60-732] Link warning: .
+WARNING: [VPL 60-732] Link warning: IP bd_387c_m00e_0 is locked. Locked reason: * IP definition 'SC EXIT (1.0)' for IP 'bd_387c_m00e_0' (customized with software release 2022.1) has a different revision in the IP Catalog.
+WARNING: [VPL 60-732] Link warning: .
+WARNING: [VPL 60-732] Link warning: IP bd_387c_m01e_0 is locked. Locked reason: * IP definition 'SC EXIT (1.0)' for IP 'bd_387c_m01e_0' (customized with software release 2022.1) has a different revision in the IP Catalog.
+WARNING: [VPL 60-732] Link warning: .
+WARNING: [VPL 60-732] Link warning: IP bd_387c_m02e_0 is locked. Locked reason: * IP definition 'SC EXIT (1.0)' for IP 'bd_387c_m02e_0' (customized with software release 2022.1) has a different revision in the IP Catalog.
+WARNING: [VPL 60-732] Link warning: .
+WARNING: [VPL 60-732] Link warning: IP bd_387c_m03e_0 is locked. Locked reason: * IP definition 'SC EXIT (1.0)' for IP 'bd_387c_m03e_0' (customized with software release 2022.1) has a different revision in the IP Catalog.
+WARNING: [VPL 60-732] Link warning: .
+WARNING: [VPL 60-732] Link warning: IP bd_387c_m04e_0 is locked. Locked reason: * IP definition 'SC EXIT (1.0)' for IP 'bd_387c_m04e_0' (customized with software release 2022.1) has a different revision in the IP Catalog.
+WARNING: [VPL 60-732] Link warning: .
+WARNING: [VPL 60-732] Link warning: IP bd_387c_one_0 is locked. Locked reason: * The IP Data in the repository is incompatible with the current instance (despite having identical Version and Revision). You will need to upgrade the IP before viewing the customization and generating outputs.
+WARNING: [VPL 60-732] Link warning: .
+ERROR: [VPL 60-704] Integration error, Step failed: generate_target An error stack with function names and arguments may be available in the 'vivado.log'.
+ERROR: [VPL 60-1328] Vpl run 'vpl' failed
+ERROR: [VPL 60-806] Failed to finish platform linker
+INFO: [v++ 60-1442] [15:55:52] Run run_link: Step vpl: Failed
+Time (s): cpu = 00:00:16 ; elapsed = 00:05:40 . Memory (MB): peak = 2208.363 ; gain = 0.000 ; free physical = 210205 ; free virtual = 324058
+ERROR: [v++ 60-661] v++ link run 'run_link' failed
+ERROR: [v++ 60-626] Kernel link failed to complete
+ERROR: [v++ 60-703] Failed to finish linking
+INFO: [v++ 60-1653] Closing dispatch client.
+make: *** [Makefile:82: xclbin/vadd.hw_emu.xclbin] Error 1

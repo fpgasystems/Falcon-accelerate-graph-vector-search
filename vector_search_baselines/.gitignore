@@ -1,0 +1,6 @@
+nsg/build
+**.nsg
+**.DS_Store
+**__pycache__
+*log.INFO*
+DEADJOE

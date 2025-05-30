@@ -1,0 +1,293 @@
+g++ -g -std=c++11 -I/home/wejiang/opt/xilinx/xrt/include -o host src/host.cpp -L/home/wejiang/opt/xilinx/xrt/lib -lxilinxopencl -pthread -lrt
+Compiled Host Executable: host
+mkdir -p ./xclbin
+v++ -g -t hw_emu --platform xilinx_u250_gen3x16_xdma_4_1_202210_1 --save-temps --config connectivity.cfg -c -k vadd --temp_dir ./_x.hw_emu -o xclbin/vadd.hw_emu.xo src/vadd.cpp
+Option Map File Used: '/tools/Xilinx/Vitis/2023.1/data/vitis/vpp/optMap.xml'
+
+****** v++ v2023.1 (64-bit)
+  **** SW Build 3860322 on 2023-05-04-06:32:48
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+INFO: [v++ 60-1306] Additional information associated with this v++ compile can be found at:
+	Reports: /pub/scratch/wenqi/graph-vector-search-on-FPGA/test_dataflow_feedback/dataflow_feedback_multi_PE_loop_with_empty_check_only_once/_x.hw_emu/reports/vadd.hw_emu
+	Log files: /pub/scratch/wenqi/graph-vector-search-on-FPGA/test_dataflow_feedback/dataflow_feedback_multi_PE_loop_with_empty_check_only_once/_x.hw_emu/logs/vadd.hw_emu
+Running Dispatch Server on port: 34737
+INFO: [v++ 60-1548] Creating build summary session with primary output /pub/scratch/wenqi/graph-vector-search-on-FPGA/test_dataflow_feedback/dataflow_feedback_multi_PE_loop_with_empty_check_only_once/xclbin/vadd.hw_emu.xo.compile_summary, at Sat Jan 27 14:55:27 2024
+INFO: [v++ 60-1315] Creating rulecheck session with output '/pub/scratch/wenqi/graph-vector-search-on-FPGA/test_dataflow_feedback/dataflow_feedback_multi_PE_loop_with_empty_check_only_once/_x.hw_emu/reports/vadd.hw_emu/v++_compile_vadd.hw_emu_guidance.html', at Sat Jan 27 14:55:27 2024
+INFO: [v++ 60-895]   Target platform: /opt/xilinx/platforms/xilinx_u250_gen3x16_xdma_4_1_202210_1/xilinx_u250_gen3x16_xdma_4_1_202210_1.xpfm
+INFO: [v++ 60-1578]   This platform contains Xilinx Shell Archive '/opt/xilinx/platforms/xilinx_u250_gen3x16_xdma_4_1_202210_1/hw/hw.xsa'
+INFO: [v++ 74-78] Compiler Version string: 2023.1
+INFO: [v++ 60-585] Compiling for hardware emulation target
+INFO: [v++ 60-423]   Target device: xilinx_u250_gen3x16_xdma_4_1_202210_1
+INFO: [v++ 60-242] Creating kernel: 'vadd'
+INFO: [v++ 60-1616] Creating a HLS clock using kernel_frequency option: 140 MHz
+
+===>The following messages were generated while  performing high-level synthesis for kernel: vadd Log file: /pub/scratch/wenqi/graph-vector-search-on-FPGA/test_dataflow_feedback/dataflow_feedback_multi_PE_loop_with_empty_check_only_once/_x.hw_emu/vadd.hw_emu/vadd/vitis_hls.log :
+INFO: [v++ 204-61] Pipelining loop 'VITIS_LOOP_26_2'.
+INFO: [v++ 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 1, loop 'VITIS_LOOP_26_2'
+INFO: [v++ 204-61] Pipelining loop 'VITIS_LOOP_43_2'.
+INFO: [v++ 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 1, loop 'VITIS_LOOP_43_2'
+INFO: [v++ 204-61] Pipelining loop 'VITIS_LOOP_62_2'.
+INFO: [v++ 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 1, loop 'VITIS_LOOP_62_2'
+INFO: [v++ 204-61] Pipelining loop 'VITIS_LOOP_82_2'.
+INFO: [v++ 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 1, loop 'VITIS_LOOP_82_2'
+INFO: [v++ 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+INFO: [v++ 200-789] **** Estimated Fmax: 191.78 MHz
+INFO: [v++ 60-594] Finished kernel compilation
+INFO: [v++ 60-244] Generating system estimate report...
+INFO: [v++ 60-1092] Generated system estimate report: /pub/scratch/wenqi/graph-vector-search-on-FPGA/test_dataflow_feedback/dataflow_feedback_multi_PE_loop_with_empty_check_only_once/_x.hw_emu/reports/vadd.hw_emu/system_estimate_vadd.hw_emu.xtxt
+INFO: [v++ 60-586] Created xclbin/vadd.hw_emu.xo
+INFO: [v++ 60-2343] Use the vitis_analyzer tool to visualize and navigate the relevant reports. Run the following command. 
+    vitis_analyzer /pub/scratch/wenqi/graph-vector-search-on-FPGA/test_dataflow_feedback/dataflow_feedback_multi_PE_loop_with_empty_check_only_once/xclbin/vadd.hw_emu.xo.compile_summary 
+INFO: [v++ 60-791] Total elapsed time: 0h 1m 15s
+INFO: [v++ 60-1653] Closing dispatch client.
+mkdir -p ./xclbin
+v++ -g -t hw_emu --platform xilinx_u250_gen3x16_xdma_4_1_202210_1 --save-temps --config connectivity.cfg -l --temp_dir ./_x.hw_emu -o xclbin/vadd.hw_emu.xclbin xclbin/vadd.hw_emu.xo # 
+Option Map File Used: '/tools/Xilinx/Vitis/2023.1/data/vitis/vpp/optMap.xml'
+
+****** v++ v2023.1 (64-bit)
+  **** SW Build 3860322 on 2023-05-04-06:32:48
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+INFO: [v++ 60-1306] Additional information associated with this v++ link can be found at:
+	Reports: /pub/scratch/wenqi/graph-vector-search-on-FPGA/test_dataflow_feedback/dataflow_feedback_multi_PE_loop_with_empty_check_only_once/_x.hw_emu/reports/link
+	Log files: /pub/scratch/wenqi/graph-vector-search-on-FPGA/test_dataflow_feedback/dataflow_feedback_multi_PE_loop_with_empty_check_only_once/_x.hw_emu/logs/link
+Running Dispatch Server on port: 37189
+INFO: [v++ 60-1548] Creating build summary session with primary output /pub/scratch/wenqi/graph-vector-search-on-FPGA/test_dataflow_feedback/dataflow_feedback_multi_PE_loop_with_empty_check_only_once/xclbin/vadd.hw_emu.xclbin.link_summary, at Sat Jan 27 14:56:45 2024
+INFO: [v++ 60-1315] Creating rulecheck session with output '/pub/scratch/wenqi/graph-vector-search-on-FPGA/test_dataflow_feedback/dataflow_feedback_multi_PE_loop_with_empty_check_only_once/_x.hw_emu/reports/link/v++_link_vadd.hw_emu_guidance.html', at Sat Jan 27 14:56:45 2024
+INFO: [v++ 60-895]   Target platform: /opt/xilinx/platforms/xilinx_u250_gen3x16_xdma_4_1_202210_1/xilinx_u250_gen3x16_xdma_4_1_202210_1.xpfm
+INFO: [v++ 60-1578]   This platform contains Xilinx Shell Archive '/opt/xilinx/platforms/xilinx_u250_gen3x16_xdma_4_1_202210_1/hw_emu/hw_emu.xsa'
+INFO: [v++ 74-78] Compiler Version string: 2023.1
+INFO: [v++ 60-629] Linking for hardware emulation target
+INFO: [v++ 60-423]   Target device: xilinx_u250_gen3x16_xdma_4_1_202210_1
+INFO: [v++ 60-1332] Run 'run_link' status: Not started
+INFO: [v++ 60-1443] [14:56:52] Run run_link: Step system_link: Started
+INFO: [v++ 60-1453] Command Line: system_link --xo /pub/scratch/wenqi/graph-vector-search-on-FPGA/test_dataflow_feedback/dataflow_feedback_multi_PE_loop_with_empty_check_only_once/xclbin/vadd.hw_emu.xo -keep --config /pub/scratch/wenqi/graph-vector-search-on-FPGA/test_dataflow_feedback/dataflow_feedback_multi_PE_loop_with_empty_check_only_once/_x.hw_emu/link/int/syslinkConfig.ini --xpfm /opt/xilinx/platforms/xilinx_u250_gen3x16_xdma_4_1_202210_1/xilinx_u250_gen3x16_xdma_4_1_202210_1.xpfm --target emu --output_dir /pub/scratch/wenqi/graph-vector-search-on-FPGA/test_dataflow_feedback/dataflow_feedback_multi_PE_loop_with_empty_check_only_once/_x.hw_emu/link/int --temp_dir /pub/scratch/wenqi/graph-vector-search-on-FPGA/test_dataflow_feedback/dataflow_feedback_multi_PE_loop_with_empty_check_only_once/_x.hw_emu/link/sys_link
+INFO: [v++ 60-1454] Run Directory: /pub/scratch/wenqi/graph-vector-search-on-FPGA/test_dataflow_feedback/dataflow_feedback_multi_PE_loop_with_empty_check_only_once/_x.hw_emu/link/run_link
+INFO: [SYSTEM_LINK 82-70] Extracting xo v3 file /pub/scratch/wenqi/graph-vector-search-on-FPGA/test_dataflow_feedback/dataflow_feedback_multi_PE_loop_with_empty_check_only_once/xclbin/vadd.hw_emu.xo
+INFO: [SYSTEM_LINK 82-53] Creating IP database /pub/scratch/wenqi/graph-vector-search-on-FPGA/test_dataflow_feedback/dataflow_feedback_multi_PE_loop_with_empty_check_only_once/_x.hw_emu/link/sys_link/_sysl/.cdb/xd_ip_db.xml
+INFO: [SYSTEM_LINK 82-38] [14:56:55] build_xd_ip_db started: /tools/Xilinx/Vitis/2023.1/bin/build_xd_ip_db -ip_search 0  -sds-pf /pub/scratch/wenqi/graph-vector-search-on-FPGA/test_dataflow_feedback/dataflow_feedback_multi_PE_loop_with_empty_check_only_once/_x.hw_emu/link/sys_link/hw_emu.hpfm -clkid 0 -ip /pub/scratch/wenqi/graph-vector-search-on-FPGA/test_dataflow_feedback/dataflow_feedback_multi_PE_loop_with_empty_check_only_once/_x.hw_emu/link/sys_link/iprepo/xilinx_com_hls_vadd_1_0,vadd -o /pub/scratch/wenqi/graph-vector-search-on-FPGA/test_dataflow_feedback/dataflow_feedback_multi_PE_loop_with_empty_check_only_once/_x.hw_emu/link/sys_link/_sysl/.cdb/xd_ip_db.xml
+INFO: [SYSTEM_LINK 82-37] [14:57:04] build_xd_ip_db finished successfully
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 440.266 ; gain = 0.000 ; free physical = 163215 ; free virtual = 334275
+INFO: [SYSTEM_LINK 82-51] Create system connectivity graph
+INFO: [SYSTEM_LINK 82-102] Applying explicit connections to the system connectivity graph: /pub/scratch/wenqi/graph-vector-search-on-FPGA/test_dataflow_feedback/dataflow_feedback_multi_PE_loop_with_empty_check_only_once/_x.hw_emu/link/sys_link/cfgraph/cfgen_cfgraph.xml
+INFO: [SYSTEM_LINK 82-38] [14:57:04] cfgen started: /tools/Xilinx/Vitis/2023.1/bin/cfgen  -nk vadd:1:vadd_1 -sp vadd_1.layer_cache:DDR[2] -sp vadd_1.out_intersect:DDR[3] -dpa_mem_offload false -dmclkid 0 -r /pub/scratch/wenqi/graph-vector-search-on-FPGA/test_dataflow_feedback/dataflow_feedback_multi_PE_loop_with_empty_check_only_once/_x.hw_emu/link/sys_link/_sysl/.cdb/xd_ip_db.xml -o /pub/scratch/wenqi/graph-vector-search-on-FPGA/test_dataflow_feedback/dataflow_feedback_multi_PE_loop_with_empty_check_only_once/_x.hw_emu/link/sys_link/cfgraph/cfgen_cfgraph.xml
+INFO: [CFGEN 83-0] Kernel Specs: 
+INFO: [CFGEN 83-0]   kernel: vadd, num: 1  {vadd_1}
+INFO: [CFGEN 83-0] Port Specs: 
+INFO: [CFGEN 83-0]   kernel: vadd_1, k_port: layer_cache, sptag: DDR[2]
+INFO: [CFGEN 83-0]   kernel: vadd_1, k_port: out_intersect, sptag: DDR[3]
+INFO: [SYSTEM_LINK 82-37] [14:57:11] cfgen finished successfully
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 440.266 ; gain = 0.000 ; free physical = 162320 ; free virtual = 334255
+INFO: [SYSTEM_LINK 82-52] Create top-level block diagram
+INFO: [SYSTEM_LINK 82-38] [14:57:11] cf2bd started: /tools/Xilinx/Vitis/2023.1/bin/cf2bd  --linux --trace_buffer 1024 --input_file /pub/scratch/wenqi/graph-vector-search-on-FPGA/test_dataflow_feedback/dataflow_feedback_multi_PE_loop_with_empty_check_only_once/_x.hw_emu/link/sys_link/cfgraph/cfgen_cfgraph.xml --ip_db /pub/scratch/wenqi/graph-vector-search-on-FPGA/test_dataflow_feedback/dataflow_feedback_multi_PE_loop_with_empty_check_only_once/_x.hw_emu/link/sys_link/_sysl/.cdb/xd_ip_db.xml --cf_name dr --working_dir /pub/scratch/wenqi/graph-vector-search-on-FPGA/test_dataflow_feedback/dataflow_feedback_multi_PE_loop_with_empty_check_only_once/_x.hw_emu/link/sys_link/_sysl/.xsd --temp_dir /pub/scratch/wenqi/graph-vector-search-on-FPGA/test_dataflow_feedback/dataflow_feedback_multi_PE_loop_with_empty_check_only_once/_x.hw_emu/link/sys_link --output_dir /pub/scratch/wenqi/graph-vector-search-on-FPGA/test_dataflow_feedback/dataflow_feedback_multi_PE_loop_with_empty_check_only_once/_x.hw_emu/link/int
+INFO: [CF2BD 82-31] Launching cf2xd: cf2xd -linux -trace-buffer 1024 -i /pub/scratch/wenqi/graph-vector-search-on-FPGA/test_dataflow_feedback/dataflow_feedback_multi_PE_loop_with_empty_check_only_once/_x.hw_emu/link/sys_link/cfgraph/cfgen_cfgraph.xml -r /pub/scratch/wenqi/graph-vector-search-on-FPGA/test_dataflow_feedback/dataflow_feedback_multi_PE_loop_with_empty_check_only_once/_x.hw_emu/link/sys_link/_sysl/.cdb/xd_ip_db.xml -o dr.xml
+INFO: [CF2BD 82-28] cf2xd finished successfully
+INFO: [CF2BD 82-31] Launching cf_xsd: cf_xsd -disable-address-gen -dn dr -dp /pub/scratch/wenqi/graph-vector-search-on-FPGA/test_dataflow_feedback/dataflow_feedback_multi_PE_loop_with_empty_check_only_once/_x.hw_emu/link/sys_link/_sysl/.xsd
+INFO: [CF2BD 82-28] cf_xsd finished successfully
+INFO: [SYSTEM_LINK 82-37] [14:57:16] cf2bd finished successfully
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 440.266 ; gain = 0.000 ; free physical = 161656 ; free virtual = 334222
+INFO: [v++ 60-1441] [14:57:16] Run run_link: Step system_link: Completed
+Time (s): cpu = 00:00:19 ; elapsed = 00:00:24 . Memory (MB): peak = 468.539 ; gain = 0.000 ; free physical = 161715 ; free virtual = 334283
+INFO: [v++ 60-1443] [14:57:16] Run run_link: Step cf2sw: Started
+INFO: [v++ 60-1453] Command Line: cf2sw -sdsl /pub/scratch/wenqi/graph-vector-search-on-FPGA/test_dataflow_feedback/dataflow_feedback_multi_PE_loop_with_empty_check_only_once/_x.hw_emu/link/int/sdsl.dat -rtd /pub/scratch/wenqi/graph-vector-search-on-FPGA/test_dataflow_feedback/dataflow_feedback_multi_PE_loop_with_empty_check_only_once/_x.hw_emu/link/int/cf2sw.rtd -nofilter /pub/scratch/wenqi/graph-vector-search-on-FPGA/test_dataflow_feedback/dataflow_feedback_multi_PE_loop_with_empty_check_only_once/_x.hw_emu/link/int/cf2sw_full.rtd -xclbin /pub/scratch/wenqi/graph-vector-search-on-FPGA/test_dataflow_feedback/dataflow_feedback_multi_PE_loop_with_empty_check_only_once/_x.hw_emu/link/int/xclbin_orig.xml -o /pub/scratch/wenqi/graph-vector-search-on-FPGA/test_dataflow_feedback/dataflow_feedback_multi_PE_loop_with_empty_check_only_once/_x.hw_emu/link/int/xclbin_orig.1.xml
+INFO: [v++ 60-1454] Run Directory: /pub/scratch/wenqi/graph-vector-search-on-FPGA/test_dataflow_feedback/dataflow_feedback_multi_PE_loop_with_empty_check_only_once/_x.hw_emu/link/run_link
+INFO: [v++ 60-1441] [14:57:20] Run run_link: Step cf2sw: Completed
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 468.539 ; gain = 0.000 ; free physical = 161082 ; free virtual = 334261
+INFO: [v++ 60-1443] [14:57:20] Run run_link: Step rtd2_system_diagram: Started
+INFO: [v++ 60-1453] Command Line: rtd2SystemDiagram
+INFO: [v++ 60-1454] Run Directory: /pub/scratch/wenqi/graph-vector-search-on-FPGA/test_dataflow_feedback/dataflow_feedback_multi_PE_loop_with_empty_check_only_once/_x.hw_emu/link/run_link
+INFO: [v++ 60-1441] [14:57:21] Run run_link: Step rtd2_system_diagram: Completed
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.33 . Memory (MB): peak = 468.539 ; gain = 0.000 ; free physical = 161015 ; free virtual = 334240
+INFO: [v++ 60-1443] [14:57:21] Run run_link: Step vpl: Started
+INFO: [v++ 60-1453] Command Line: vpl -t hw_emu -f xilinx_u250_gen3x16_xdma_4_1_202210_1 -s -g --kernel_frequency 140 --remote_ip_cache /pub/scratch/wenqi/graph-vector-search-on-FPGA/test_dataflow_feedback/dataflow_feedback_multi_PE_loop_with_empty_check_only_once/.ipcache --output_dir /pub/scratch/wenqi/graph-vector-search-on-FPGA/test_dataflow_feedback/dataflow_feedback_multi_PE_loop_with_empty_check_only_once/_x.hw_emu/link/int --log_dir /pub/scratch/wenqi/graph-vector-search-on-FPGA/test_dataflow_feedback/dataflow_feedback_multi_PE_loop_with_empty_check_only_once/_x.hw_emu/logs/link --report_dir /pub/scratch/wenqi/graph-vector-search-on-FPGA/test_dataflow_feedback/dataflow_feedback_multi_PE_loop_with_empty_check_only_once/_x.hw_emu/reports/link --config /pub/scratch/wenqi/graph-vector-search-on-FPGA/test_dataflow_feedback/dataflow_feedback_multi_PE_loop_with_empty_check_only_once/_x.hw_emu/link/int/vplConfig.ini -k /pub/scratch/wenqi/graph-vector-search-on-FPGA/test_dataflow_feedback/dataflow_feedback_multi_PE_loop_with_empty_check_only_once/_x.hw_emu/link/int/kernel_info.dat --webtalk_flag Vitis --temp_dir /pub/scratch/wenqi/graph-vector-search-on-FPGA/test_dataflow_feedback/dataflow_feedback_multi_PE_loop_with_empty_check_only_once/_x.hw_emu/link --emulation_mode debug_waveform --no-info --iprepo /pub/scratch/wenqi/graph-vector-search-on-FPGA/test_dataflow_feedback/dataflow_feedback_multi_PE_loop_with_empty_check_only_once/_x.hw_emu/link/int/xo/ip_repo/xilinx_com_hls_vadd_1_0 --messageDb /pub/scratch/wenqi/graph-vector-search-on-FPGA/test_dataflow_feedback/dataflow_feedback_multi_PE_loop_with_empty_check_only_once/_x.hw_emu/link/run_link/vpl.pb /pub/scratch/wenqi/graph-vector-search-on-FPGA/test_dataflow_feedback/dataflow_feedback_multi_PE_loop_with_empty_check_only_once/_x.hw_emu/link/int/dr.bd.tcl
+INFO: [v++ 60-1454] Run Directory: /pub/scratch/wenqi/graph-vector-search-on-FPGA/test_dataflow_feedback/dataflow_feedback_multi_PE_loop_with_empty_check_only_once/_x.hw_emu/link/run_link
+
+****** vpl v2023.1 (64-bit)
+  **** SW Build 3860322 on 2023-05-04-06:32:48
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+INFO: [VPL 60-839] Read in kernel information from file '/pub/scratch/wenqi/graph-vector-search-on-FPGA/test_dataflow_feedback/dataflow_feedback_multi_PE_loop_with_empty_check_only_once/_x.hw_emu/link/int/kernel_info.dat'.
+INFO: [VPL 74-78] Compiler Version string: 2023.1
+INFO: [VPL 60-423]   Target device: xilinx_u250_gen3x16_xdma_4_1_202210_1
+INFO: [VPL 60-1032] Extracting hardware platform to /pub/scratch/wenqi/graph-vector-search-on-FPGA/test_dataflow_feedback/dataflow_feedback_multi_PE_loop_with_empty_check_only_once/_x.hw_emu/link/vivado/vpl/.local/hw_platform
+[14:59:03] Run vpl: Step create_project: Started
+Creating Vivado project.
+[15:00:23] Run vpl: Step create_project: RUNNING...
+[15:01:26] Run vpl: Step create_project: Completed
+[15:01:26] Run vpl: Step create_bd: Started
+[15:01:54] Run vpl: Step create_bd: Completed
+[15:01:54] Run vpl: Step update_bd: Started
+[15:02:00] Run vpl: Step update_bd: Completed
+[15:02:00] Run vpl: Step generate_target: Started
+[15:03:24] Run vpl: Step generate_target: RUNNING...
+[15:04:50] Run vpl: Step generate_target: RUNNING...
+[15:05:32] Run vpl: Step generate_target: Completed
+[15:05:32] Run vpl: Step config_hw_emu.gen_scripts: Started
+[15:05:57] Run vpl: Step config_hw_emu.gen_scripts: Completed
+[15:05:57] Run vpl: Step config_hw_emu.compile: Started
+[15:07:07] Run vpl: Step config_hw_emu.compile: Completed
+[15:07:07] Run vpl: Step config_hw_emu.elaborate: Started
+Check VPL, containing 4 checks, has run: 0 errors, 28 warning violations
+WARNING: [IP-LOCK-01] In your vivado project:prj for design:dr the IP bd_448f_second_lmb_bram_I_0 is locked. The IP is locked for the following reason - * IP definition 'Block Memory Generator (8.4)' for IP 'bd_448f_second_lmb_bram_I_0' (customized with software release 2022.1) has a different revision in the IP Catalog.
+.
+WARNING: [IP-LOCK-01] In your vivado project:prj for design:dr the IP pfm_top_axi_clock_converter_0_0 is locked. The IP is locked for the following reason - * IP definition 'AXI Clock Converter (2.1)' for IP 'pfm_top_axi_clock_converter_0_0' (customized with software release 2022.1) has a different revision in the IP Catalog.
+.
+WARNING: [IP-LOCK-01] In your vivado project:prj for design:dr the IP pfm_top_axi_vip_0_0 is locked. The IP is locked for the following reason - * IP definition 'AXI Verification IP (1.1)' for IP 'pfm_top_axi_vip_0_0' (customized with software release 2022.1) has a different revision in the IP Catalog.
+.
+WARNING: [IP-LOCK-01] In your vivado project:prj for design:dr the IP pfm_top_axi_vip_1_0 is locked. The IP is locked for the following reason - * IP definition 'AXI Verification IP (1.1)' for IP 'pfm_top_axi_vip_1_0' (customized with software release 2022.1) has a different revision in the IP Catalog.
+.
+WARNING: [IP-LOCK-01] In your vivado project:prj for design:dr the IP pfm_top_axi_vip_2_0 is locked. The IP is locked for the following reason - * IP definition 'AXI Verification IP (1.1)' for IP 'pfm_top_axi_vip_2_0' (customized with software release 2022.1) has a different revision in the IP Catalog.
+.
+WARNING: [IP-LOCK-01] In your vivado project:prj for design:dr the IP pfm_top_axi_vip_3_0 is locked. The IP is locked for the following reason - * IP definition 'AXI Verification IP (1.1)' for IP 'pfm_top_axi_vip_3_0' (customized with software release 2022.1) has a different revision in the IP Catalog.
+.
+WARNING: [IP-LOCK-01] In your vivado project:prj for design:dr the IP pfm_top_connect_to_es_cu_0 is locked. The IP is locked for the following reason - * IP definition 'AXI Interconnect (2.1)' for IP 'pfm_top_connect_to_es_cu_0' (customized with software release 2022.1) has a different revision in the IP Catalog.
+.
+WARNING: [IP-LOCK-01] In your vivado project:prj for design:dr the IP pfm_top_sim_ddr_0_0 is locked. The IP is locked for the following reason - * IP definition 'DDR4 SDRAM (MIG) (2.2)' for IP 'pfm_top_sim_ddr_0_0' (customized with software release 2022.1) has a different revision in the IP Catalog.
+ * IP 'pfm_top_sim_ddr_0_0' contains one or more locked subcores.* Target IP definition 'DDR4 SDRAM (MIG) (2.2)' requires a revision change. Please review the change log before upgrading the IP.
+.
+WARNING: [IP-LOCK-01] In your vivado project:prj for design:dr the IP pfm_top_smartconnect_0_0 is locked. The IP is locked for the following reason - * IP definition 'AXI SmartConnect (1.0)' for IP 'pfm_top_smartconnect_0_0' (customized with software release 2022.1) has a different revision in the IP Catalog.
+ * IP 'pfm_top_smartconnect_0_0' contains one or more locked subcores.* Target IP definition 'AXI SmartConnect (1.0)' requires a revision change. Please review the change log before upgrading the IP.
+.
+WARNING: [IP-LOCK-01] In your vivado project:prj for design:dr the IP pfm_top_xbar_0 is locked. The IP is locked for the following reason - * IP definition 'AXI Crossbar (2.1)' for IP 'pfm_top_xbar_0' (customized with software release 2022.1) has a different revision in the IP Catalog.
+.
+WARNING: [IP-LOCK-01] In your vivado project:prj for design:dr the IP pfm_top_sim_ddr_0_0_microblaze_mcs is locked. The IP is locked for the following reason - * IP definition 'MicroBlaze MCS (3.0)' for IP 'pfm_top_sim_ddr_0_0_microblaze_mcs' (customized with software release 2022.1) has a different revision in the IP Catalog.
+ * IP 'pfm_top_sim_ddr_0_0_microblaze_mcs' contains one or more locked subcores.* Please upgrade the parent IP 'pfm_top_sim_ddr_0_0'.
+.
+WARNING: [IP-LOCK-01] In your vivado project:prj for design:dr the IP pfm_top_sim_ddr_0_0_phy is locked. The IP is locked for the following reason - * The IP Data in the repository is incompatible with the current instance (despite having identical Version and Revision). You will need to upgrade the IP before viewing the customization and generating outputs.
+.
+WARNING: [IP-LOCK-01] In your vivado project:prj for design:dr the IP bd_387c_m00e_0 is locked. The IP is locked for the following reason - * IP definition 'SC EXIT (1.0)' for IP 'bd_387c_m00e_0' (customized with software release 2022.1) has a different revision in the IP Catalog.
+.
+WARNING: [IP-LOCK-01] In your vivado project:prj for design:dr the IP bd_387c_m01e_0 is locked. The IP is locked for the following reason - * IP definition 'SC EXIT (1.0)' for IP 'bd_387c_m01e_0' (customized with software release 2022.1) has a different revision in the IP Catalog.
+.
+WARNING: [IP-LOCK-01] In your vivado project:prj for design:dr the IP bd_387c_m02e_0 is locked. The IP is locked for the following reason - * IP definition 'SC EXIT (1.0)' for IP 'bd_387c_m02e_0' (customized with software release 2022.1) has a different revision in the IP Catalog.
+.
+WARNING: [IP-LOCK-01] In your vivado project:prj for design:dr the IP bd_387c_m03e_0 is locked. The IP is locked for the following reason - * IP definition 'SC EXIT (1.0)' for IP 'bd_387c_m03e_0' (customized with software release 2022.1) has a different revision in the IP Catalog.
+.
+WARNING: [IP-LOCK-01] In your vivado project:prj for design:dr the IP bd_387c_m04e_0 is locked. The IP is locked for the following reason - * IP definition 'SC EXIT (1.0)' for IP 'bd_387c_m04e_0' (customized with software release 2022.1) has a different revision in the IP Catalog.
+.
+WARNING: [IP-LOCK-01] In your vivado project:prj for design:dr the IP bd_387c_one_0 is locked. The IP is locked for the following reason - * The IP Data in the repository is incompatible with the current instance (despite having identical Version and Revision). You will need to upgrade the IP before viewing the customization and generating outputs.
+.
+WARNING: [IP-LOCK-01] In your vivado project:prj for design:dr the IP bd_387c_s00mmu_0 is locked. The IP is locked for the following reason - * IP definition 'SC MMU (1.0)' for IP 'bd_387c_s00mmu_0' (customized with software release 2022.1) has a different revision in the IP Catalog.
+.
+WARNING: [IP-LOCK-01] In your vivado project:prj for design:dr the IP bd_387c_s00sic_0 is locked. The IP is locked for the following reason - * IP definition 'SC SI_CONVERTER (1.0)' for IP 'bd_387c_s00sic_0' (customized with software release 2022.1) has a different revision in the IP Catalog.
+.
+WARNING: [IP-LOCK-01] In your vivado project:prj for design:dr the IP bd_387c_s01mmu_0 is locked. The IP is locked for the following reason - * IP definition 'SC MMU (1.0)' for IP 'bd_387c_s01mmu_0' (customized with software release 2022.1) has a different revision in the IP Catalog.
+.
+WARNING: [IP-LOCK-01] In your vivado project:prj for design:dr the IP bd_387c_s01sic_0 is locked. The IP is locked for the following reason - * IP definition 'SC SI_CONVERTER (1.0)' for IP 'bd_387c_s01sic_0' (customized with software release 2022.1) has a different revision in the IP Catalog.
+.
+WARNING: [IP-LOCK-01] In your vivado project:prj for design:dr the IP bd_448f_dlmb_cntlr_0 is locked. The IP is locked for the following reason - * IP definition 'LMB BRAM Controller (4.0)' for IP 'bd_448f_dlmb_cntlr_0' (customized with software release 2022.1) has a different revision in the IP Catalog.
+.
+WARNING: [IP-LOCK-01] In your vivado project:prj for design:dr the IP bd_448f_ilmb_cntlr_0 is locked. The IP is locked for the following reason - * IP definition 'LMB BRAM Controller (4.0)' for IP 'bd_448f_ilmb_cntlr_0' (customized with software release 2022.1) has a different revision in the IP Catalog.
+.
+WARNING: [IP-LOCK-01] In your vivado project:prj for design:dr the IP bd_448f_lmb_bram_I_0 is locked. The IP is locked for the following reason - * IP definition 'Block Memory Generator (8.4)' for IP 'bd_448f_lmb_bram_I_0' (customized with software release 2022.1) has a different revision in the IP Catalog.
+.
+WARNING: [IP-LOCK-01] In your vivado project:prj for design:dr the IP bd_448f_microblaze_I_0 is locked. The IP is locked for the following reason - * IP definition 'MicroBlaze (11.0)' for IP 'bd_448f_microblaze_I_0' (customized with software release 2022.1) has a different revision in the IP Catalog.
+.
+WARNING: [IP-LOCK-01] In your vivado project:prj for design:dr the IP bd_448f_second_dlmb_cntlr_0 is locked. The IP is locked for the following reason - * IP definition 'LMB BRAM Controller (4.0)' for IP 'bd_448f_second_dlmb_cntlr_0' (customized with software release 2022.1) has a different revision in the IP Catalog.
+.
+WARNING: [IP-LOCK-01] In your vivado project:prj for design:dr the IP bd_448f_second_ilmb_cntlr_0 is locked. The IP is locked for the following reason - * IP definition 'LMB BRAM Controller (4.0)' for IP 'bd_448f_second_ilmb_cntlr_0' (customized with software release 2022.1) has a different revision in the IP Catalog.
+.
+[15:07:42] Run vpl: Step config_hw_emu.elaborate: Completed
+[15:07:47] Run vpl: FINISHED. Run Status: config_hw_emu.elaborate Complete!
+INFO: [v++ 60-1441] [15:07:51] Run run_link: Step vpl: Completed
+Time (s): cpu = 00:00:14 ; elapsed = 00:10:31 . Memory (MB): peak = 468.539 ; gain = 0.000 ; free physical = 169581 ; free virtual = 339895
+INFO: [v++ 60-1443] [15:07:51] Run run_link: Step rtdgen: Started
+INFO: [v++ 60-1453] Command Line: rtdgen
+INFO: [v++ 60-1454] Run Directory: /pub/scratch/wenqi/graph-vector-search-on-FPGA/test_dataflow_feedback/dataflow_feedback_multi_PE_loop_with_empty_check_only_once/_x.hw_emu/link/run_link
+INFO: [v++ 60-991] clock name 'kernel_clk/clk' (clock ID '0') is being mapped to clock name 'DATA_CLK' in the xclbin
+INFO: [v++ 60-1230] The compiler selected the following frequencies for the runtime controllable kernel clock(s) and scalable system clock(s): Kernel (DATA) clock: kernel_clk/clk = 140, Kernel (KERNEL) clock: kernel_clk/clk = 140
+INFO: [v++ 60-1453] Command Line: cf2sw -a /pub/scratch/wenqi/graph-vector-search-on-FPGA/test_dataflow_feedback/dataflow_feedback_multi_PE_loop_with_empty_check_only_once/_x.hw_emu/link/int/address_map.xml -sdsl /pub/scratch/wenqi/graph-vector-search-on-FPGA/test_dataflow_feedback/dataflow_feedback_multi_PE_loop_with_empty_check_only_once/_x.hw_emu/link/int/sdsl.dat -xclbin /pub/scratch/wenqi/graph-vector-search-on-FPGA/test_dataflow_feedback/dataflow_feedback_multi_PE_loop_with_empty_check_only_once/_x.hw_emu/link/int/xclbin_orig.xml -rtd /pub/scratch/wenqi/graph-vector-search-on-FPGA/test_dataflow_feedback/dataflow_feedback_multi_PE_loop_with_empty_check_only_once/_x.hw_emu/link/int/vadd.hw_emu.rtd -o /pub/scratch/wenqi/graph-vector-search-on-FPGA/test_dataflow_feedback/dataflow_feedback_multi_PE_loop_with_empty_check_only_once/_x.hw_emu/link/int/vadd.hw_emu.xml
+INFO: [v++ 60-1652] Cf2sw returned exit code: 0
+WARNING: [v++ 60-1455] Debuggable symbols are not generated successfully, clean up /pub/scratch/wenqi/graph-vector-search-on-FPGA/test_dataflow_feedback/dataflow_feedback_multi_PE_loop_with_empty_check_only_once/_x.hw_emu/link/int/consolidated.cf
+INFO: [v++ 60-1441] [15:08:01] Run run_link: Step rtdgen: Completed
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:10 . Memory (MB): peak = 468.539 ; gain = 0.000 ; free physical = 169482 ; free virtual = 339830
+INFO: [v++ 60-1443] [15:08:01] Run run_link: Step xclbinutil: Started
+INFO: [v++ 60-1453] Command Line: xclbinutil --add-section DEBUG_IP_LAYOUT:JSON:/pub/scratch/wenqi/graph-vector-search-on-FPGA/test_dataflow_feedback/dataflow_feedback_multi_PE_loop_with_empty_check_only_once/_x.hw_emu/link/int/debug_ip_layout.rtd --add-section BITSTREAM:RAW:/pub/scratch/wenqi/graph-vector-search-on-FPGA/test_dataflow_feedback/dataflow_feedback_multi_PE_loop_with_empty_check_only_once/_x.hw_emu/link/int/behav.xse --force --target hw_emu --key-value SYS:dfx_enable:false --add-section :JSON:/pub/scratch/wenqi/graph-vector-search-on-FPGA/test_dataflow_feedback/dataflow_feedback_multi_PE_loop_with_empty_check_only_once/_x.hw_emu/link/int/vadd.hw_emu.rtd --add-section CLOCK_FREQ_TOPOLOGY:JSON:/pub/scratch/wenqi/graph-vector-search-on-FPGA/test_dataflow_feedback/dataflow_feedback_multi_PE_loop_with_empty_check_only_once/_x.hw_emu/link/int/vadd.hw_emu_xml.rtd --add-section BUILD_METADATA:JSON:/pub/scratch/wenqi/graph-vector-search-on-FPGA/test_dataflow_feedback/dataflow_feedback_multi_PE_loop_with_empty_check_only_once/_x.hw_emu/link/int/vadd.hw_emu_build.rtd --add-section EMBEDDED_METADATA:RAW:/pub/scratch/wenqi/graph-vector-search-on-FPGA/test_dataflow_feedback/dataflow_feedback_multi_PE_loop_with_empty_check_only_once/_x.hw_emu/link/int/vadd.hw_emu.xml --add-section SYSTEM_METADATA:RAW:/pub/scratch/wenqi/graph-vector-search-on-FPGA/test_dataflow_feedback/dataflow_feedback_multi_PE_loop_with_empty_check_only_once/_x.hw_emu/link/int/systemDiagramModelSlrBaseAddress.json --key-value SYS:PlatformVBNV:xilinx_u250_gen3x16_xdma_4_1_202210_1 --output /pub/scratch/wenqi/graph-vector-search-on-FPGA/test_dataflow_feedback/dataflow_feedback_multi_PE_loop_with_empty_check_only_once/xclbin/vadd.hw_emu.xclbin
+INFO: [v++ 60-1454] Run Directory: /pub/scratch/wenqi/graph-vector-search-on-FPGA/test_dataflow_feedback/dataflow_feedback_multi_PE_loop_with_empty_check_only_once/_x.hw_emu/link/run_link
+XRT Build Version: 2.13.466 (2022.1)
+       Build Date: 2022-04-14 17:43:11
+          Hash ID: f5505e402c2ca1ffe45eb6d3a9399b23a0dc8776
+Creating a default 'in-memory' xclbin image.
+
+Section: 'DEBUG_IP_LAYOUT'(9) was successfully added.
+Size   : 872 bytes
+Format : JSON
+File   : '/pub/scratch/wenqi/graph-vector-search-on-FPGA/test_dataflow_feedback/dataflow_feedback_multi_PE_loop_with_empty_check_only_once/_x.hw_emu/link/int/debug_ip_layout.rtd'
+
+Section: 'BITSTREAM'(0) was successfully added.
+Size   : 34322360 bytes
+Format : RAW
+File   : '/pub/scratch/wenqi/graph-vector-search-on-FPGA/test_dataflow_feedback/dataflow_feedback_multi_PE_loop_with_empty_check_only_once/_x.hw_emu/link/int/behav.xse'
+
+Section: 'MEM_TOPOLOGY'(6) was successfully added.
+Format : JSON
+File   : 'mem_topology'
+
+Section: 'IP_LAYOUT'(8) was successfully added.
+Format : JSON
+File   : 'ip_layout'
+
+Section: 'CONNECTIVITY'(7) was successfully added.
+Format : JSON
+File   : 'connectivity'
+
+Section: 'CLOCK_FREQ_TOPOLOGY'(11) was successfully added.
+Size   : 274 bytes
+Format : JSON
+File   : '/pub/scratch/wenqi/graph-vector-search-on-FPGA/test_dataflow_feedback/dataflow_feedback_multi_PE_loop_with_empty_check_only_once/_x.hw_emu/link/int/vadd.hw_emu_xml.rtd'
+
+Section: 'BUILD_METADATA'(14) was successfully added.
+Size   : 2135 bytes
+Format : JSON
+File   : '/pub/scratch/wenqi/graph-vector-search-on-FPGA/test_dataflow_feedback/dataflow_feedback_multi_PE_loop_with_empty_check_only_once/_x.hw_emu/link/int/vadd.hw_emu_build.rtd'
+
+Section: 'EMBEDDED_METADATA'(2) was successfully added.
+Size   : 6654 bytes
+Format : RAW
+File   : '/pub/scratch/wenqi/graph-vector-search-on-FPGA/test_dataflow_feedback/dataflow_feedback_multi_PE_loop_with_empty_check_only_once/_x.hw_emu/link/int/vadd.hw_emu.xml'
+
+Section: 'SYSTEM_METADATA'(22) was successfully added.
+Size   : 13413 bytes
+Format : RAW
+File   : '/pub/scratch/wenqi/graph-vector-search-on-FPGA/test_dataflow_feedback/dataflow_feedback_multi_PE_loop_with_empty_check_only_once/_x.hw_emu/link/int/systemDiagramModelSlrBaseAddress.json'
+Successfully wrote (34355346 bytes) to the output file: /pub/scratch/wenqi/graph-vector-search-on-FPGA/test_dataflow_feedback/dataflow_feedback_multi_PE_loop_with_empty_check_only_once/xclbin/vadd.hw_emu.xclbin
+Leaving xclbinutil.
+INFO: [v++ 60-1441] [15:08:02] Run run_link: Step xclbinutil: Completed
+Time (s): cpu = 00:00:00.14 ; elapsed = 00:00:00.61 . Memory (MB): peak = 468.539 ; gain = 0.000 ; free physical = 169441 ; free virtual = 339823
+INFO: [v++ 60-1443] [15:08:02] Run run_link: Step xclbinutilinfo: Started
+INFO: [v++ 60-1453] Command Line: xclbinutil --quiet --force --info /pub/scratch/wenqi/graph-vector-search-on-FPGA/test_dataflow_feedback/dataflow_feedback_multi_PE_loop_with_empty_check_only_once/xclbin/vadd.hw_emu.xclbin.info --input /pub/scratch/wenqi/graph-vector-search-on-FPGA/test_dataflow_feedback/dataflow_feedback_multi_PE_loop_with_empty_check_only_once/xclbin/vadd.hw_emu.xclbin
+INFO: [v++ 60-1454] Run Directory: /pub/scratch/wenqi/graph-vector-search-on-FPGA/test_dataflow_feedback/dataflow_feedback_multi_PE_loop_with_empty_check_only_once/_x.hw_emu/link/run_link
+INFO: [v++ 60-1441] [15:08:03] Run run_link: Step xclbinutilinfo: Completed
+Time (s): cpu = 00:00:00.36 ; elapsed = 00:00:00.75 . Memory (MB): peak = 468.539 ; gain = 0.000 ; free physical = 169439 ; free virtual = 339821
+INFO: [v++ 60-1443] [15:08:03] Run run_link: Step generate_sc_driver: Started
+INFO: [v++ 60-1453] Command Line: 
+INFO: [v++ 60-1454] Run Directory: /pub/scratch/wenqi/graph-vector-search-on-FPGA/test_dataflow_feedback/dataflow_feedback_multi_PE_loop_with_empty_check_only_once/_x.hw_emu/link/run_link
+INFO: [v++ 60-1441] [15:08:03] Run run_link: Step generate_sc_driver: Completed
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.04 . Memory (MB): peak = 468.539 ; gain = 0.000 ; free physical = 169439 ; free virtual = 339820
+Check POST-VPL, containing 1 checks, has run: 0 errors
+INFO: [v++ 60-244] Generating system estimate report...
+INFO: [v++ 60-1092] Generated system estimate report: /pub/scratch/wenqi/graph-vector-search-on-FPGA/test_dataflow_feedback/dataflow_feedback_multi_PE_loop_with_empty_check_only_once/_x.hw_emu/reports/link/system_estimate_vadd.hw_emu.xtxt
+INFO: [v++ 60-586] Created xclbin/vadd.hw_emu.xclbin
+INFO: [v++ 60-1307] Run completed. Additional information can be found in:
+	Guidance: /pub/scratch/wenqi/graph-vector-search-on-FPGA/test_dataflow_feedback/dataflow_feedback_multi_PE_loop_with_empty_check_only_once/_x.hw_emu/reports/link/v++_link_vadd.hw_emu_guidance.html
+	Steps Log File: /pub/scratch/wenqi/graph-vector-search-on-FPGA/test_dataflow_feedback/dataflow_feedback_multi_PE_loop_with_empty_check_only_once/_x.hw_emu/logs/link/link.steps.log
+
+INFO: [v++ 60-2343] Use the vitis_analyzer tool to visualize and navigate the relevant reports. Run the following command. 
+    vitis_analyzer /pub/scratch/wenqi/graph-vector-search-on-FPGA/test_dataflow_feedback/dataflow_feedback_multi_PE_loop_with_empty_check_only_once/xclbin/vadd.hw_emu.xclbin.link_summary 
+INFO: [v++ 60-791] Total elapsed time: 0h 11m 28s
+INFO: [v++ 60-1653] Closing dispatch client.
+/tools/Xilinx/Vitis/2023.1/bin/emconfigutil --nd 1 --od . --platform xilinx_u250_gen3x16_xdma_4_1_202210_1
+
+****** configutil v2023.1 (64-bit)
+  **** SW Build 3860322 on 2023-05-04-06:32:48
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+INFO: [ConfigUtil 60-895]   Target platform: /opt/xilinx/platforms/xilinx_u250_gen3x16_xdma_4_1_202210_1/xilinx_u250_gen3x16_xdma_4_1_202210_1.xpfm
+INFO: [ConfigUtil 60-1578]   This platform contains Xilinx Shell Archive '/opt/xilinx/platforms/xilinx_u250_gen3x16_xdma_4_1_202210_1/hw/hw.xsa'
+INFO: [ConfigUtil 60-1032] Extracting hardware platform to .
+emulation configuration file `emconfig.json` is created in . directory 

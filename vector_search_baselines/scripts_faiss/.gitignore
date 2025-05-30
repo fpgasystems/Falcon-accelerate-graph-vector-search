@@ -1,0 +1,4 @@
+sift_200nn.graph
+*log
+*.pickle
+log*

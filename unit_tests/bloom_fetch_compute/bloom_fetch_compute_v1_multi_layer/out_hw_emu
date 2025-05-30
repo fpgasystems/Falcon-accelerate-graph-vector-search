@@ -1,0 +1,325 @@
+g++ -g -std=c++11 -I/home/wejiang/opt/xilinx/xrt/include -o host src/host.cpp -L/home/wejiang/opt/xilinx/xrt/lib -lxilinxopencl -pthread -lrt
+Compiled Host Executable: host
+mkdir -p ./xclbin
+v++ -g -t hw_emu --platform xilinx_u250_gen3x16_xdma_4_1_202210_1 --save-temps --config connectivity.cfg -c -k vadd --temp_dir ./_x.hw_emu -o xclbin/vadd.hw_emu.xo src/vadd.cpp
+Option Map File Used: '/tools/Xilinx/Vitis/2022.1/data/vitis/vpp/optMap.xml'
+
+****** v++ v2022.1 (64-bit)
+  **** SW Build 3524075 on 2022-04-13-17:42:45
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+INFO: [v++ 60-1306] Additional information associated with this v++ compile can be found at:
+	Reports: /pub/scratch/wenqi/graph-vector-search-on-FPGA/unit_tests/bloom_fetch_compute/bloom_fetch_compute_v1_multi_layer/_x.hw_emu/reports/vadd.hw_emu
+	Log files: /pub/scratch/wenqi/graph-vector-search-on-FPGA/unit_tests/bloom_fetch_compute/bloom_fetch_compute_v1_multi_layer/_x.hw_emu/logs/vadd.hw_emu
+Running Dispatch Server on port: 44889
+INFO: [v++ 60-1548] Creating build summary session with primary output /pub/scratch/wenqi/graph-vector-search-on-FPGA/unit_tests/bloom_fetch_compute/bloom_fetch_compute_v1_multi_layer/xclbin/vadd.hw_emu.xo.compile_summary, at Wed Mar 13 23:12:58 2024
+INFO: [v++ 60-1316] Initiating connection to rulecheck server, at Wed Mar 13 23:12:58 2024
+INFO: [v++ 60-1315] Creating rulecheck session with output '/pub/scratch/wenqi/graph-vector-search-on-FPGA/unit_tests/bloom_fetch_compute/bloom_fetch_compute_v1_multi_layer/_x.hw_emu/reports/vadd.hw_emu/v++_compile_vadd.hw_emu_guidance.html', at Wed Mar 13 23:12:59 2024
+INFO: [v++ 60-895]   Target platform: /opt/xilinx/platforms/xilinx_u250_gen3x16_xdma_4_1_202210_1/xilinx_u250_gen3x16_xdma_4_1_202210_1.xpfm
+INFO: [v++ 60-1578]   This platform contains Xilinx Shell Archive '/opt/xilinx/platforms/xilinx_u250_gen3x16_xdma_4_1_202210_1/hw/hw.xsa'
+INFO: [v++ 74-78] Compiler Version string: 2022.1
+INFO: [v++ 60-585] Compiling for hardware emulation target
+INFO: [v++ 60-423]   Target device: xilinx_u250_gen3x16_xdma_4_1_202210_1
+INFO: [v++ 60-242] Creating kernel: 'vadd'
+INFO: [v++ 60-1616] Creating a HLS clock using kernel_frequency option: 200 MHz
+
+===>The following messages were generated while  performing high-level synthesis for kernel: vadd Log file: /pub/scratch/wenqi/graph-vector-search-on-FPGA/unit_tests/bloom_fetch_compute/bloom_fetch_compute_v1_multi_layer/_x.hw_emu/vadd.hw_emu/vadd/vitis_hls.log :
+INFO: [v++ 204-61] Pipelining loop 'VITIS_LOOP_11_1'.
+INFO: [v++ 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 1, loop 'VITIS_LOOP_11_1'
+INFO: [v++ 204-61] Pipelining loop 'VITIS_LOOP_39_2'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 3, loop 'VITIS_LOOP_39_2'
+INFO: [v++ 204-61] Pipelining loop 'VITIS_LOOP_53_4'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 3, loop 'VITIS_LOOP_53_4'
+INFO: [v++ 204-61] Pipelining loop 'VITIS_LOOP_70_6'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 3, loop 'VITIS_LOOP_70_6'
+INFO: [v++ 204-61] Pipelining loop 'VITIS_LOOP_11_1'.
+INFO: [v++ 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 1, loop 'VITIS_LOOP_11_1'
+INFO: [v++ 204-61] Pipelining loop 'VITIS_LOOP_91_2'.
+INFO: [v++ 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'VITIS_LOOP_91_2'
+INFO: [v++ 204-61] Pipelining loop 'VITIS_LOOP_57_1'.
+INFO: [v++ 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 1, loop 'VITIS_LOOP_57_1'
+INFO: [v++ 204-61] Pipelining loop 'VITIS_LOOP_356_5'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'VITIS_LOOP_356_5'
+INFO: [v++ 204-61] Pipelining loop 'VITIS_LOOP_57_1'.
+INFO: [v++ 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 1, loop 'VITIS_LOOP_57_1'
+INFO: [v++ 204-61] Pipelining loop 'VITIS_LOOP_339_3'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'VITIS_LOOP_339_3'
+INFO: [v++ 204-61] Pipelining loop 'VITIS_LOOP_136_4'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'VITIS_LOOP_136_4'
+INFO: [v++ 204-61] Pipelining loop 'VITIS_LOOP_161_2'.
+INFO: [v++ 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 1, loop 'VITIS_LOOP_161_2'
+INFO: [v++ 204-61] Pipelining loop 'VITIS_LOOP_57_1'.
+INFO: [v++ 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 1, loop 'VITIS_LOOP_57_1'
+INFO: [v++ 204-61] Pipelining loop 'VITIS_LOOP_92_3'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 6, loop 'VITIS_LOOP_92_3'
+INFO: [v++ 204-61] Pipelining loop 'VITIS_LOOP_57_1'.
+INFO: [v++ 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 1, loop 'VITIS_LOOP_57_1'
+INFO: [v++ 204-61] Pipelining loop 'VITIS_LOOP_92_3'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 6, loop 'VITIS_LOOP_92_3'
+INFO: [v++ 204-61] Pipelining loop 'VITIS_LOOP_57_1'.
+INFO: [v++ 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 1, loop 'VITIS_LOOP_57_1'
+INFO: [v++ 204-61] Pipelining loop 'VITIS_LOOP_92_3'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 6, loop 'VITIS_LOOP_92_3'
+INFO: [v++ 204-61] Pipelining loop 'VITIS_LOOP_57_1'.
+INFO: [v++ 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 1, loop 'VITIS_LOOP_57_1'
+INFO: [v++ 204-61] Pipelining loop 'VITIS_LOOP_92_3'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 6, loop 'VITIS_LOOP_92_3'
+INFO: [v++ 204-61] Pipelining loop 'VITIS_LOOP_190_3'.
+INFO: [v++ 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 1, loop 'VITIS_LOOP_190_3'
+INFO: [v++ 204-61] Pipelining loop 'VITIS_LOOP_36_1'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 1, loop 'VITIS_LOOP_36_1'
+INFO: [v++ 204-61] Pipelining loop 'VITIS_LOOP_23_1'.
+INFO: [v++ 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 1, loop 'VITIS_LOOP_23_1'
+INFO: [v++ 204-61] Pipelining loop 'VITIS_LOOP_36_1'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 1, loop 'VITIS_LOOP_36_1'
+INFO: [v++ 204-61] Pipelining loop 'VITIS_LOOP_57_1'.
+INFO: [v++ 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 1, loop 'VITIS_LOOP_57_1'
+INFO: [v++ 204-61] Pipelining loop 'VITIS_LOOP_72_1'.
+INFO: [v++ 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 1, loop 'VITIS_LOOP_72_1'
+INFO: [v++ 204-61] Pipelining loop 'VITIS_LOOP_147_3'.
+INFO: [v++ 200-1470] Pipelining result : Target II = NA, Final II = 8, Depth = 10, loop 'VITIS_LOOP_147_3'
+INFO: [v++ 204-61] Pipelining loop 'VITIS_LOOP_57_1'.
+INFO: [v++ 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 1, loop 'VITIS_LOOP_57_1'
+INFO: [v++ 204-61] Pipelining loop 'VITIS_LOOP_444_4'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'VITIS_LOOP_444_4'
+INFO: [v++ 204-61] Pipelining loop 'VITIS_LOOP_57_1'.
+INFO: [v++ 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 1, loop 'VITIS_LOOP_57_1'
+INFO: [v++ 204-61] Pipelining loop 'VITIS_LOOP_424_3'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'VITIS_LOOP_424_3'
+INFO: [v++ 204-61] Pipelining loop 'VITIS_LOOP_136_4'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'VITIS_LOOP_136_4'
+INFO: [v++ 204-61] Pipelining loop 'VITIS_LOOP_57_1'.
+INFO: [v++ 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 1, loop 'VITIS_LOOP_57_1'
+INFO: [v++ 204-61] Pipelining loop 'VITIS_LOOP_143_4'.
+INFO: [v++ 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 11, loop 'VITIS_LOOP_143_4'
+INFO: [v++ 204-61] Pipelining loop 'VITIS_LOOP_152_5'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 3, loop 'VITIS_LOOP_152_5'
+INFO: [v++ 204-61] Pipelining loop 'VITIS_LOOP_91_2'.
+INFO: [v++ 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'VITIS_LOOP_91_2'
+INFO: [v++ 204-61] Pipelining loop 'VITIS_LOOP_57_1'.
+INFO: [v++ 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 1, loop 'VITIS_LOOP_57_1'
+INFO: [v++ 204-61] Pipelining loop 'VITIS_LOOP_67_2'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'VITIS_LOOP_67_2'
+INFO: [v++ 204-61] Pipelining loop 'VITIS_LOOP_57_1'.
+INFO: [v++ 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 1, loop 'VITIS_LOOP_57_1'
+INFO: [v++ 204-61] Pipelining loop 'VITIS_LOOP_89_5_VITIS_LOOP_90_6'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 29, loop 'VITIS_LOOP_89_5_VITIS_LOOP_90_6'
+INFO: [v++ 204-61] Pipelining loop 'VITIS_LOOP_57_1'.
+INFO: [v++ 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 1, loop 'VITIS_LOOP_57_1'
+INFO: [v++ 204-61] Pipelining loop 'VITIS_LOOP_149_5'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 4, loop 'VITIS_LOOP_149_5'
+INFO: [v++ 204-61] Pipelining loop 'VITIS_LOOP_57_1'.
+INFO: [v++ 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 1, loop 'VITIS_LOOP_57_1'
+INFO: [v++ 204-61] Pipelining loop 'VITIS_LOOP_57_1'.
+INFO: [v++ 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 1, loop 'VITIS_LOOP_57_1'
+INFO: [v++ 204-61] Pipelining loop 'VITIS_LOOP_219_3_VITIS_LOOP_220_4'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 3, Depth = 28, loop 'VITIS_LOOP_219_3_VITIS_LOOP_220_4'
+INFO: [v++ 204-61] Pipelining loop 'VITIS_LOOP_217_2'.
+INFO: [v++ 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'VITIS_LOOP_217_2'
+INFO: [v++ 204-61] Pipelining loop 'VITIS_LOOP_57_1'.
+INFO: [v++ 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 1, loop 'VITIS_LOOP_57_1'
+INFO: [v++ 204-61] Pipelining loop 'VITIS_LOOP_137_4'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 3, loop 'VITIS_LOOP_137_4'
+INFO: [v++ 204-61] Pipelining loop 'VITIS_LOOP_57_1'.
+INFO: [v++ 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 1, loop 'VITIS_LOOP_57_1'
+INFO: [v++ 204-61] Pipelining loop 'VITIS_LOOP_119_3'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 3, loop 'VITIS_LOOP_119_3'
+INFO: [v++ 200-790] **** Loop Constraint Status: All loop constraints were NOT satisfied.
+INFO: [v++ 200-789] **** Estimated Fmax: 273.97 MHz
+INFO: [v++ 60-594] Finished kernel compilation
+INFO: [v++ 60-244] Generating system estimate report...
+INFO: [v++ 60-1092] Generated system estimate report: /pub/scratch/wenqi/graph-vector-search-on-FPGA/unit_tests/bloom_fetch_compute/bloom_fetch_compute_v1_multi_layer/_x.hw_emu/reports/vadd.hw_emu/system_estimate_vadd.hw_emu.xtxt
+INFO: [v++ 60-586] Created xclbin/vadd.hw_emu.xo
+INFO: [v++ 60-2343] Use the vitis_analyzer tool to visualize and navigate the relevant reports. Run the following command. 
+    vitis_analyzer /pub/scratch/wenqi/graph-vector-search-on-FPGA/unit_tests/bloom_fetch_compute/bloom_fetch_compute_v1_multi_layer/xclbin/vadd.hw_emu.xo.compile_summary 
+INFO: [v++ 60-791] Total elapsed time: 0h 3m 6s
+INFO: [v++ 60-1653] Closing dispatch client.
+mkdir -p ./xclbin
+v++ -g -t hw_emu --platform xilinx_u250_gen3x16_xdma_4_1_202210_1 --save-temps --config connectivity.cfg -l --temp_dir ./_x.hw_emu -o xclbin/vadd.hw_emu.xclbin xclbin/vadd.hw_emu.xo # 
+Option Map File Used: '/tools/Xilinx/Vitis/2022.1/data/vitis/vpp/optMap.xml'
+
+****** v++ v2022.1 (64-bit)
+  **** SW Build 3524075 on 2022-04-13-17:42:45
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+INFO: [v++ 60-1306] Additional information associated with this v++ link can be found at:
+	Reports: /pub/scratch/wenqi/graph-vector-search-on-FPGA/unit_tests/bloom_fetch_compute/bloom_fetch_compute_v1_multi_layer/_x.hw_emu/reports/link
+	Log files: /pub/scratch/wenqi/graph-vector-search-on-FPGA/unit_tests/bloom_fetch_compute/bloom_fetch_compute_v1_multi_layer/_x.hw_emu/logs/link
+Running Dispatch Server on port: 34417
+INFO: [v++ 60-1548] Creating build summary session with primary output /pub/scratch/wenqi/graph-vector-search-on-FPGA/unit_tests/bloom_fetch_compute/bloom_fetch_compute_v1_multi_layer/xclbin/vadd.hw_emu.xclbin.link_summary, at Wed Mar 13 23:16:06 2024
+INFO: [v++ 60-1316] Initiating connection to rulecheck server, at Wed Mar 13 23:16:06 2024
+INFO: [v++ 60-1315] Creating rulecheck session with output '/pub/scratch/wenqi/graph-vector-search-on-FPGA/unit_tests/bloom_fetch_compute/bloom_fetch_compute_v1_multi_layer/_x.hw_emu/reports/link/v++_link_vadd.hw_emu_guidance.html', at Wed Mar 13 23:16:08 2024
+INFO: [v++ 60-895]   Target platform: /opt/xilinx/platforms/xilinx_u250_gen3x16_xdma_4_1_202210_1/xilinx_u250_gen3x16_xdma_4_1_202210_1.xpfm
+INFO: [v++ 60-1578]   This platform contains Xilinx Shell Archive '/opt/xilinx/platforms/xilinx_u250_gen3x16_xdma_4_1_202210_1/hw_emu/hw_emu.xsa'
+INFO: [v++ 74-78] Compiler Version string: 2022.1
+INFO: [v++ 60-629] Linking for hardware emulation target
+INFO: [v++ 60-423]   Target device: xilinx_u250_gen3x16_xdma_4_1_202210_1
+INFO: [v++ 60-1332] Run 'run_link' status: Not started
+INFO: [v++ 60-1443] [23:16:18] Run run_link: Step system_link: Started
+INFO: [v++ 60-1453] Command Line: system_link --xo /pub/scratch/wenqi/graph-vector-search-on-FPGA/unit_tests/bloom_fetch_compute/bloom_fetch_compute_v1_multi_layer/xclbin/vadd.hw_emu.xo -keep --config /pub/scratch/wenqi/graph-vector-search-on-FPGA/unit_tests/bloom_fetch_compute/bloom_fetch_compute_v1_multi_layer/_x.hw_emu/link/int/syslinkConfig.ini --xpfm /opt/xilinx/platforms/xilinx_u250_gen3x16_xdma_4_1_202210_1/xilinx_u250_gen3x16_xdma_4_1_202210_1.xpfm --target emu --output_dir /pub/scratch/wenqi/graph-vector-search-on-FPGA/unit_tests/bloom_fetch_compute/bloom_fetch_compute_v1_multi_layer/_x.hw_emu/link/int --temp_dir /pub/scratch/wenqi/graph-vector-search-on-FPGA/unit_tests/bloom_fetch_compute/bloom_fetch_compute_v1_multi_layer/_x.hw_emu/link/sys_link
+INFO: [v++ 60-1454] Run Directory: /pub/scratch/wenqi/graph-vector-search-on-FPGA/unit_tests/bloom_fetch_compute/bloom_fetch_compute_v1_multi_layer/_x.hw_emu/link/run_link
+INFO: [SYSTEM_LINK 60-1316] Initiating connection to rulecheck server, at Wed Mar 13 23:16:20 2024
+INFO: [SYSTEM_LINK 82-70] Extracting xo v3 file /pub/scratch/wenqi/graph-vector-search-on-FPGA/unit_tests/bloom_fetch_compute/bloom_fetch_compute_v1_multi_layer/xclbin/vadd.hw_emu.xo
+INFO: [SYSTEM_LINK 82-53] Creating IP database /pub/scratch/wenqi/graph-vector-search-on-FPGA/unit_tests/bloom_fetch_compute/bloom_fetch_compute_v1_multi_layer/_x.hw_emu/link/sys_link/_sysl/.cdb/xd_ip_db.xml
+INFO: [SYSTEM_LINK 82-38] [23:16:25] build_xd_ip_db started: /tools/Xilinx/Vitis/2022.1/bin/build_xd_ip_db -ip_search 0  -sds-pf /pub/scratch/wenqi/graph-vector-search-on-FPGA/unit_tests/bloom_fetch_compute/bloom_fetch_compute_v1_multi_layer/_x.hw_emu/link/sys_link/hw_emu.hpfm -clkid 0 -ip /pub/scratch/wenqi/graph-vector-search-on-FPGA/unit_tests/bloom_fetch_compute/bloom_fetch_compute_v1_multi_layer/_x.hw_emu/link/sys_link/iprepo/xilinx_com_hls_vadd_1_0,vadd -o /pub/scratch/wenqi/graph-vector-search-on-FPGA/unit_tests/bloom_fetch_compute/bloom_fetch_compute_v1_multi_layer/_x.hw_emu/link/sys_link/_sysl/.cdb/xd_ip_db.xml
+INFO: [SYSTEM_LINK 82-37] [23:16:33] build_xd_ip_db finished successfully
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2269.578 ; gain = 0.000 ; free physical = 138595 ; free virtual = 237442
+INFO: [SYSTEM_LINK 82-51] Create system connectivity graph
+INFO: [SYSTEM_LINK 82-102] Applying explicit connections to the system connectivity graph: /pub/scratch/wenqi/graph-vector-search-on-FPGA/unit_tests/bloom_fetch_compute/bloom_fetch_compute_v1_multi_layer/_x.hw_emu/link/sys_link/cfgraph/cfgen_cfgraph.xml
+INFO: [SYSTEM_LINK 82-38] [23:16:33] cfgen started: /tools/Xilinx/Vitis/2022.1/bin/cfgen  -nk vadd:1:vadd_1 -sp vadd_1.query_vectors:DDR[3] -sp vadd_1.mem_keys:DDR[3] -sp vadd_1.db_vectors:DDR[2] -sp vadd_1.out_id_dist:DDR[1] -dmclkid 0 -r /pub/scratch/wenqi/graph-vector-search-on-FPGA/unit_tests/bloom_fetch_compute/bloom_fetch_compute_v1_multi_layer/_x.hw_emu/link/sys_link/_sysl/.cdb/xd_ip_db.xml -o /pub/scratch/wenqi/graph-vector-search-on-FPGA/unit_tests/bloom_fetch_compute/bloom_fetch_compute_v1_multi_layer/_x.hw_emu/link/sys_link/cfgraph/cfgen_cfgraph.xml
+INFO: [CFGEN 83-0] Kernel Specs: 
+INFO: [CFGEN 83-0]   kernel: vadd, num: 1  {vadd_1}
+INFO: [CFGEN 83-0] Port Specs: 
+INFO: [CFGEN 83-0]   kernel: vadd_1, k_port: query_vectors, sptag: DDR[3]
+INFO: [CFGEN 83-0]   kernel: vadd_1, k_port: mem_keys, sptag: DDR[3]
+INFO: [CFGEN 83-0]   kernel: vadd_1, k_port: db_vectors, sptag: DDR[2]
+INFO: [CFGEN 83-0]   kernel: vadd_1, k_port: out_id_dist, sptag: DDR[1]
+INFO: [SYSTEM_LINK 82-37] [23:16:40] cfgen finished successfully
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2269.578 ; gain = 0.000 ; free physical = 139564 ; free virtual = 238477
+INFO: [SYSTEM_LINK 82-52] Create top-level block diagram
+INFO: [SYSTEM_LINK 82-38] [23:16:40] cf2bd started: /tools/Xilinx/Vitis/2022.1/bin/cf2bd  --linux --trace_buffer 1024 --input_file /pub/scratch/wenqi/graph-vector-search-on-FPGA/unit_tests/bloom_fetch_compute/bloom_fetch_compute_v1_multi_layer/_x.hw_emu/link/sys_link/cfgraph/cfgen_cfgraph.xml --ip_db /pub/scratch/wenqi/graph-vector-search-on-FPGA/unit_tests/bloom_fetch_compute/bloom_fetch_compute_v1_multi_layer/_x.hw_emu/link/sys_link/_sysl/.cdb/xd_ip_db.xml --cf_name dr --working_dir /pub/scratch/wenqi/graph-vector-search-on-FPGA/unit_tests/bloom_fetch_compute/bloom_fetch_compute_v1_multi_layer/_x.hw_emu/link/sys_link/_sysl/.xsd --temp_dir /pub/scratch/wenqi/graph-vector-search-on-FPGA/unit_tests/bloom_fetch_compute/bloom_fetch_compute_v1_multi_layer/_x.hw_emu/link/sys_link --output_dir /pub/scratch/wenqi/graph-vector-search-on-FPGA/unit_tests/bloom_fetch_compute/bloom_fetch_compute_v1_multi_layer/_x.hw_emu/link/int
+INFO: [CF2BD 82-31] Launching cf2xd: cf2xd -linux -trace-buffer 1024 -i /pub/scratch/wenqi/graph-vector-search-on-FPGA/unit_tests/bloom_fetch_compute/bloom_fetch_compute_v1_multi_layer/_x.hw_emu/link/sys_link/cfgraph/cfgen_cfgraph.xml -r /pub/scratch/wenqi/graph-vector-search-on-FPGA/unit_tests/bloom_fetch_compute/bloom_fetch_compute_v1_multi_layer/_x.hw_emu/link/sys_link/_sysl/.cdb/xd_ip_db.xml -o dr.xml
+INFO: [CF2BD 82-28] cf2xd finished successfully
+INFO: [CF2BD 82-31] Launching cf_xsd: cf_xsd -disable-address-gen -dn dr -dp /pub/scratch/wenqi/graph-vector-search-on-FPGA/unit_tests/bloom_fetch_compute/bloom_fetch_compute_v1_multi_layer/_x.hw_emu/link/sys_link/_sysl/.xsd
+INFO: [CF2BD 82-28] cf_xsd finished successfully
+INFO: [SYSTEM_LINK 82-37] [23:16:44] cf2bd finished successfully
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2269.578 ; gain = 0.000 ; free physical = 137284 ; free virtual = 236253
+INFO: [v++ 60-1441] [23:16:45] Run run_link: Step system_link: Completed
+Time (s): cpu = 00:00:23 ; elapsed = 00:00:26 . Memory (MB): peak = 2208.738 ; gain = 0.000 ; free physical = 137314 ; free virtual = 236291
+INFO: [v++ 60-1443] [23:16:45] Run run_link: Step cf2sw: Started
+INFO: [v++ 60-1453] Command Line: cf2sw -sdsl /pub/scratch/wenqi/graph-vector-search-on-FPGA/unit_tests/bloom_fetch_compute/bloom_fetch_compute_v1_multi_layer/_x.hw_emu/link/int/sdsl.dat -rtd /pub/scratch/wenqi/graph-vector-search-on-FPGA/unit_tests/bloom_fetch_compute/bloom_fetch_compute_v1_multi_layer/_x.hw_emu/link/int/cf2sw.rtd -nofilter /pub/scratch/wenqi/graph-vector-search-on-FPGA/unit_tests/bloom_fetch_compute/bloom_fetch_compute_v1_multi_layer/_x.hw_emu/link/int/cf2sw_full.rtd -xclbin /pub/scratch/wenqi/graph-vector-search-on-FPGA/unit_tests/bloom_fetch_compute/bloom_fetch_compute_v1_multi_layer/_x.hw_emu/link/int/xclbin_orig.xml -o /pub/scratch/wenqi/graph-vector-search-on-FPGA/unit_tests/bloom_fetch_compute/bloom_fetch_compute_v1_multi_layer/_x.hw_emu/link/int/xclbin_orig.1.xml
+INFO: [v++ 60-1454] Run Directory: /pub/scratch/wenqi/graph-vector-search-on-FPGA/unit_tests/bloom_fetch_compute/bloom_fetch_compute_v1_multi_layer/_x.hw_emu/link/run_link
+INFO: [v++ 60-1441] [23:16:49] Run run_link: Step cf2sw: Completed
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2208.738 ; gain = 0.000 ; free physical = 135319 ; free virtual = 234311
+INFO: [v++ 60-1443] [23:16:49] Run run_link: Step rtd2_system_diagram: Started
+INFO: [v++ 60-1453] Command Line: rtd2SystemDiagram
+INFO: [v++ 60-1454] Run Directory: /pub/scratch/wenqi/graph-vector-search-on-FPGA/unit_tests/bloom_fetch_compute/bloom_fetch_compute_v1_multi_layer/_x.hw_emu/link/run_link
+INFO: [v++ 60-1441] [23:16:50] Run run_link: Step rtd2_system_diagram: Completed
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.56 . Memory (MB): peak = 2208.738 ; gain = 0.000 ; free physical = 135048 ; free virtual = 234040
+INFO: [v++ 60-1443] [23:16:50] Run run_link: Step vpl: Started
+INFO: [v++ 60-1453] Command Line: vpl -t hw_emu -f xilinx_u250_gen3x16_xdma_4_1_202210_1 -g --kernel_frequency 200 --remote_ip_cache /pub/scratch/wenqi/graph-vector-search-on-FPGA/unit_tests/bloom_fetch_compute/bloom_fetch_compute_v1_multi_layer/.ipcache -s --output_dir /pub/scratch/wenqi/graph-vector-search-on-FPGA/unit_tests/bloom_fetch_compute/bloom_fetch_compute_v1_multi_layer/_x.hw_emu/link/int --log_dir /pub/scratch/wenqi/graph-vector-search-on-FPGA/unit_tests/bloom_fetch_compute/bloom_fetch_compute_v1_multi_layer/_x.hw_emu/logs/link --report_dir /pub/scratch/wenqi/graph-vector-search-on-FPGA/unit_tests/bloom_fetch_compute/bloom_fetch_compute_v1_multi_layer/_x.hw_emu/reports/link --config /pub/scratch/wenqi/graph-vector-search-on-FPGA/unit_tests/bloom_fetch_compute/bloom_fetch_compute_v1_multi_layer/_x.hw_emu/link/int/vplConfig.ini -k /pub/scratch/wenqi/graph-vector-search-on-FPGA/unit_tests/bloom_fetch_compute/bloom_fetch_compute_v1_multi_layer/_x.hw_emu/link/int/kernel_info.dat --webtalk_flag Vitis --temp_dir /pub/scratch/wenqi/graph-vector-search-on-FPGA/unit_tests/bloom_fetch_compute/bloom_fetch_compute_v1_multi_layer/_x.hw_emu/link --emulation_mode debug_waveform --no-info --iprepo /pub/scratch/wenqi/graph-vector-search-on-FPGA/unit_tests/bloom_fetch_compute/bloom_fetch_compute_v1_multi_layer/_x.hw_emu/link/int/xo/ip_repo/xilinx_com_hls_vadd_1_0 --messageDb /pub/scratch/wenqi/graph-vector-search-on-FPGA/unit_tests/bloom_fetch_compute/bloom_fetch_compute_v1_multi_layer/_x.hw_emu/link/run_link/vpl.pb /pub/scratch/wenqi/graph-vector-search-on-FPGA/unit_tests/bloom_fetch_compute/bloom_fetch_compute_v1_multi_layer/_x.hw_emu/link/int/dr.bd.tcl
+INFO: [v++ 60-1454] Run Directory: /pub/scratch/wenqi/graph-vector-search-on-FPGA/unit_tests/bloom_fetch_compute/bloom_fetch_compute_v1_multi_layer/_x.hw_emu/link/run_link
+
+****** vpl v2022.1 (64-bit)
+  **** SW Build 3524075 on 2022-04-13-17:42:45
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+INFO: [VPL 60-839] Read in kernel information from file '/pub/scratch/wenqi/graph-vector-search-on-FPGA/unit_tests/bloom_fetch_compute/bloom_fetch_compute_v1_multi_layer/_x.hw_emu/link/int/kernel_info.dat'.
+INFO: [VPL 74-78] Compiler Version string: 2022.1
+INFO: [VPL 60-423]   Target device: xilinx_u250_gen3x16_xdma_4_1_202210_1
+INFO: [VPL 60-1032] Extracting hardware platform to /pub/scratch/wenqi/graph-vector-search-on-FPGA/unit_tests/bloom_fetch_compute/bloom_fetch_compute_v1_multi_layer/_x.hw_emu/link/vivado/vpl/.local/hw_platform
+[23:17:36] Run vpl: Step create_project: Started
+Creating Vivado project.
+[23:18:54] Run vpl: Step create_project: RUNNING...
+[23:19:06] Run vpl: Step create_project: Completed
+[23:19:06] Run vpl: Step create_bd: Started
+[23:19:29] Run vpl: Step create_bd: Completed
+[23:19:29] Run vpl: Step update_bd: Started
+[23:19:39] Run vpl: Step update_bd: Completed
+[23:19:39] Run vpl: Step generate_target: Started
+[23:21:02] Run vpl: Step generate_target: RUNNING...
+[23:22:29] Run vpl: Step generate_target: RUNNING...
+[23:23:10] Run vpl: Step generate_target: Completed
+[23:23:10] Run vpl: Step config_hw_emu.gen_scripts: Started
+[23:23:35] Run vpl: Step config_hw_emu.gen_scripts: Completed
+[23:23:35] Run vpl: Step config_hw_emu.compile: Started
+[23:23:58] Run vpl: Step config_hw_emu.compile: Completed
+[23:23:58] Run vpl: Step config_hw_emu.elaborate: Started
+[23:25:01] Run vpl: Step config_hw_emu.elaborate: Completed
+[23:25:06] Run vpl: FINISHED. Run Status: config_hw_emu.elaborate Complete!
+INFO: [v++ 60-1441] [23:25:09] Run run_link: Step vpl: Completed
+Time (s): cpu = 00:00:17 ; elapsed = 00:08:19 . Memory (MB): peak = 2208.738 ; gain = 0.000 ; free physical = 123034 ; free virtual = 220125
+INFO: [v++ 60-1443] [23:25:09] Run run_link: Step rtdgen: Started
+INFO: [v++ 60-1453] Command Line: rtdgen
+INFO: [v++ 60-1454] Run Directory: /pub/scratch/wenqi/graph-vector-search-on-FPGA/unit_tests/bloom_fetch_compute/bloom_fetch_compute_v1_multi_layer/_x.hw_emu/link/run_link
+INFO: [v++ 60-991] clock name 'kernel_clk/clk' (clock ID '0') is being mapped to clock name 'DATA_CLK' in the xclbin
+INFO: [v++ 60-1230] The compiler selected the following frequencies for the runtime controllable kernel clock(s) and scalable system clock(s): Kernel (DATA) clock: kernel_clk/clk = 200, Kernel (KERNEL) clock: kernel_clk/clk = 200
+INFO: [v++ 60-1453] Command Line: cf2sw -a /pub/scratch/wenqi/graph-vector-search-on-FPGA/unit_tests/bloom_fetch_compute/bloom_fetch_compute_v1_multi_layer/_x.hw_emu/link/int/address_map.xml -sdsl /pub/scratch/wenqi/graph-vector-search-on-FPGA/unit_tests/bloom_fetch_compute/bloom_fetch_compute_v1_multi_layer/_x.hw_emu/link/int/sdsl.dat -xclbin /pub/scratch/wenqi/graph-vector-search-on-FPGA/unit_tests/bloom_fetch_compute/bloom_fetch_compute_v1_multi_layer/_x.hw_emu/link/int/xclbin_orig.xml -rtd /pub/scratch/wenqi/graph-vector-search-on-FPGA/unit_tests/bloom_fetch_compute/bloom_fetch_compute_v1_multi_layer/_x.hw_emu/link/int/vadd.hw_emu.rtd -o /pub/scratch/wenqi/graph-vector-search-on-FPGA/unit_tests/bloom_fetch_compute/bloom_fetch_compute_v1_multi_layer/_x.hw_emu/link/int/vadd.hw_emu.xml
+INFO: [v++ 60-1652] Cf2sw returned exit code: 0
+WARNING: [v++ 60-1455] Debuggable symbols are not generated successfully, clean up /pub/scratch/wenqi/graph-vector-search-on-FPGA/unit_tests/bloom_fetch_compute/bloom_fetch_compute_v1_multi_layer/_x.hw_emu/link/int/consolidated.cf
+INFO: [v++ 60-1441] [23:25:18] Run run_link: Step rtdgen: Completed
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2208.738 ; gain = 0.000 ; free physical = 124702 ; free virtual = 221887
+INFO: [v++ 60-1443] [23:25:18] Run run_link: Step xclbinutil: Started
+INFO: [v++ 60-1453] Command Line: xclbinutil --add-section DEBUG_IP_LAYOUT:JSON:/pub/scratch/wenqi/graph-vector-search-on-FPGA/unit_tests/bloom_fetch_compute/bloom_fetch_compute_v1_multi_layer/_x.hw_emu/link/int/debug_ip_layout.rtd --add-section BITSTREAM:RAW:/pub/scratch/wenqi/graph-vector-search-on-FPGA/unit_tests/bloom_fetch_compute/bloom_fetch_compute_v1_multi_layer/_x.hw_emu/link/int/behav.xse --force --target hw_emu --key-value SYS:dfx_enable:false --add-section :JSON:/pub/scratch/wenqi/graph-vector-search-on-FPGA/unit_tests/bloom_fetch_compute/bloom_fetch_compute_v1_multi_layer/_x.hw_emu/link/int/vadd.hw_emu.rtd --add-section CLOCK_FREQ_TOPOLOGY:JSON:/pub/scratch/wenqi/graph-vector-search-on-FPGA/unit_tests/bloom_fetch_compute/bloom_fetch_compute_v1_multi_layer/_x.hw_emu/link/int/vadd.hw_emu_xml.rtd --add-section BUILD_METADATA:JSON:/pub/scratch/wenqi/graph-vector-search-on-FPGA/unit_tests/bloom_fetch_compute/bloom_fetch_compute_v1_multi_layer/_x.hw_emu/link/int/vadd.hw_emu_build.rtd --add-section EMBEDDED_METADATA:RAW:/pub/scratch/wenqi/graph-vector-search-on-FPGA/unit_tests/bloom_fetch_compute/bloom_fetch_compute_v1_multi_layer/_x.hw_emu/link/int/vadd.hw_emu.xml --add-section SYSTEM_METADATA:RAW:/pub/scratch/wenqi/graph-vector-search-on-FPGA/unit_tests/bloom_fetch_compute/bloom_fetch_compute_v1_multi_layer/_x.hw_emu/link/int/systemDiagramModelSlrBaseAddress.json --key-value SYS:PlatformVBNV:xilinx_u250_gen3x16_xdma_4_1_202210_1 --output /pub/scratch/wenqi/graph-vector-search-on-FPGA/unit_tests/bloom_fetch_compute/bloom_fetch_compute_v1_multi_layer/xclbin/vadd.hw_emu.xclbin
+INFO: [v++ 60-1454] Run Directory: /pub/scratch/wenqi/graph-vector-search-on-FPGA/unit_tests/bloom_fetch_compute/bloom_fetch_compute_v1_multi_layer/_x.hw_emu/link/run_link
+XRT Build Version: 2.13.466 (2022.1)
+       Build Date: 2022-04-14 17:43:11
+          Hash ID: f5505e402c2ca1ffe45eb6d3a9399b23a0dc8776
+Creating a default 'in-memory' xclbin image.
+
+Section: 'DEBUG_IP_LAYOUT'(9) was successfully added.
+Size   : 1160 bytes
+Format : JSON
+File   : '/pub/scratch/wenqi/graph-vector-search-on-FPGA/unit_tests/bloom_fetch_compute/bloom_fetch_compute_v1_multi_layer/_x.hw_emu/link/int/debug_ip_layout.rtd'
+
+Section: 'BITSTREAM'(0) was successfully added.
+Size   : 50649831 bytes
+Format : RAW
+File   : '/pub/scratch/wenqi/graph-vector-search-on-FPGA/unit_tests/bloom_fetch_compute/bloom_fetch_compute_v1_multi_layer/_x.hw_emu/link/int/behav.xse'
+
+Section: 'MEM_TOPOLOGY'(6) was successfully added.
+Format : JSON
+File   : 'mem_topology'
+
+Section: 'IP_LAYOUT'(8) was successfully added.
+Format : JSON
+File   : 'ip_layout'
+
+Section: 'CONNECTIVITY'(7) was successfully added.
+Format : JSON
+File   : 'connectivity'
+
+Section: 'CLOCK_FREQ_TOPOLOGY'(11) was successfully added.
+Size   : 274 bytes
+Format : JSON
+File   : '/pub/scratch/wenqi/graph-vector-search-on-FPGA/unit_tests/bloom_fetch_compute/bloom_fetch_compute_v1_multi_layer/_x.hw_emu/link/int/vadd.hw_emu_xml.rtd'
+
+Section: 'BUILD_METADATA'(14) was successfully added.
+Size   : 4013 bytes
+Format : JSON
+File   : '/pub/scratch/wenqi/graph-vector-search-on-FPGA/unit_tests/bloom_fetch_compute/bloom_fetch_compute_v1_multi_layer/_x.hw_emu/link/int/vadd.hw_emu_build.rtd'
+
+Section: 'EMBEDDED_METADATA'(2) was successfully added.
+Size   : 70163 bytes
+Format : RAW
+File   : '/pub/scratch/wenqi/graph-vector-search-on-FPGA/unit_tests/bloom_fetch_compute/bloom_fetch_compute_v1_multi_layer/_x.hw_emu/link/int/vadd.hw_emu.xml'
+
+Section: 'SYSTEM_METADATA'(22) was successfully added.
+Size   : 19404 bytes
+Format : RAW
+File   : '/pub/scratch/wenqi/graph-vector-search-on-FPGA/unit_tests/bloom_fetch_compute/bloom_fetch_compute_v1_multi_layer/_x.hw_emu/link/int/systemDiagramModelSlrBaseAddress.json'
+Successfully wrote (50757138 bytes) to the output file: /pub/scratch/wenqi/graph-vector-search-on-FPGA/unit_tests/bloom_fetch_compute/bloom_fetch_compute_v1_multi_layer/xclbin/vadd.hw_emu.xclbin
+Leaving xclbinutil.
+INFO: [v++ 60-1441] [23:25:19] Run run_link: Step xclbinutil: Completed
+Time (s): cpu = 00:00:00.12 ; elapsed = 00:00:00.66 . Memory (MB): peak = 2208.738 ; gain = 0.000 ; free physical = 124026 ; free virtual = 221262
+INFO: [v++ 60-1443] [23:25:19] Run run_link: Step xclbinutilinfo: Started
+INFO: [v++ 60-1453] Command Line: xclbinutil --quiet --force --info /pub/scratch/wenqi/graph-vector-search-on-FPGA/unit_tests/bloom_fetch_compute/bloom_fetch_compute_v1_multi_layer/xclbin/vadd.hw_emu.xclbin.info --input /pub/scratch/wenqi/graph-vector-search-on-FPGA/unit_tests/bloom_fetch_compute/bloom_fetch_compute_v1_multi_layer/xclbin/vadd.hw_emu.xclbin
+INFO: [v++ 60-1454] Run Directory: /pub/scratch/wenqi/graph-vector-search-on-FPGA/unit_tests/bloom_fetch_compute/bloom_fetch_compute_v1_multi_layer/_x.hw_emu/link/run_link
+INFO: [v++ 60-1441] [23:25:19] Run run_link: Step xclbinutilinfo: Completed
+Time (s): cpu = 00:00:00.53 ; elapsed = 00:00:00.65 . Memory (MB): peak = 2208.738 ; gain = 0.000 ; free physical = 125784 ; free virtual = 223020
+INFO: [v++ 60-1443] [23:25:19] Run run_link: Step generate_sc_driver: Started
+INFO: [v++ 60-1453] Command Line: 
+INFO: [v++ 60-1454] Run Directory: /pub/scratch/wenqi/graph-vector-search-on-FPGA/unit_tests/bloom_fetch_compute/bloom_fetch_compute_v1_multi_layer/_x.hw_emu/link/run_link
+INFO: [v++ 60-1441] [23:25:19] Run run_link: Step generate_sc_driver: Completed
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2208.738 ; gain = 0.000 ; free physical = 125786 ; free virtual = 223019
+INFO: [v++ 60-244] Generating system estimate report...
+INFO: [v++ 60-1092] Generated system estimate report: /pub/scratch/wenqi/graph-vector-search-on-FPGA/unit_tests/bloom_fetch_compute/bloom_fetch_compute_v1_multi_layer/_x.hw_emu/reports/link/system_estimate_vadd.hw_emu.xtxt
+INFO: [v++ 60-586] Created xclbin/vadd.hw_emu.xclbin
+INFO: [v++ 60-1307] Run completed. Additional information can be found in:
+	Guidance: /pub/scratch/wenqi/graph-vector-search-on-FPGA/unit_tests/bloom_fetch_compute/bloom_fetch_compute_v1_multi_layer/_x.hw_emu/reports/link/v++_link_vadd.hw_emu_guidance.html
+	Steps Log File: /pub/scratch/wenqi/graph-vector-search-on-FPGA/unit_tests/bloom_fetch_compute/bloom_fetch_compute_v1_multi_layer/_x.hw_emu/logs/link/link.steps.log
+
+INFO: [v++ 60-2343] Use the vitis_analyzer tool to visualize and navigate the relevant reports. Run the following command. 
+    vitis_analyzer /pub/scratch/wenqi/graph-vector-search-on-FPGA/unit_tests/bloom_fetch_compute/bloom_fetch_compute_v1_multi_layer/xclbin/vadd.hw_emu.xclbin.link_summary 
+INFO: [v++ 60-791] Total elapsed time: 0h 9m 24s
+INFO: [v++ 60-1653] Closing dispatch client.
+/tools/Xilinx//Vitis/2022.1/bin/emconfigutil --nd 1 --od . --platform xilinx_u250_gen3x16_xdma_4_1_202210_1
+
+****** configutil v2022.1 (64-bit)
+  **** SW Build 3524075 on 2022-04-13-17:42:45
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+INFO: [ConfigUtil 60-895]   Target platform: /opt/xilinx/platforms/xilinx_u250_gen3x16_xdma_4_1_202210_1/xilinx_u250_gen3x16_xdma_4_1_202210_1.xpfm
+INFO: [ConfigUtil 60-1578]   This platform contains Xilinx Shell Archive '/opt/xilinx/platforms/xilinx_u250_gen3x16_xdma_4_1_202210_1/hw/hw.xsa'
+INFO: [ConfigUtil 60-1032] Extracting hardware platform to .
+emulation configuration file `emconfig.json` is created in . directory 

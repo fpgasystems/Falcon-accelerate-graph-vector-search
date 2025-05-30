@@ -1,0 +1,10 @@
+
+[submodule "hnswlib"]
+	path = hnswlib
+	url = git@github.com:PomeloTea0726/hnswlib.git
+[submodule "nsg"]
+	path = nsg
+	url = git@github.com:PomeloTea0726/nsg.git
+[submodule "ggnn"]
+	path = ggnn
+	url = git@github.com:PomeloTea0726/ggnn.git

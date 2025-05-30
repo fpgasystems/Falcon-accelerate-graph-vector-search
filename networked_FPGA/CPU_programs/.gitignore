@@ -1,0 +1,8 @@
+*bin
+CPU_to_FPGA
+CPU_client
+CPU_client_simulator
+FPGA_simulator
+CPU_to_single_FPGA
+*.double
+CPU_cooridnator_for_GPU_FPGA

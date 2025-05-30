@@ -1,0 +1,127 @@
+mkdir -p ./xclbin
+v++ -g -t hw --platform xilinx_u250_gen3x16_xdma_4_1_202210_1 --save-temps --config connectivity.cfg -l --temp_dir ./_x.hw -o xclbin/vadd.hw.xclbin xclbin/vadd.hw.xo # 
+Option Map File Used: '/tools/Xilinx/Vitis/2022.1/data/vitis/vpp/optMap.xml'
+INFO: [v++ 82-4274] Default memory will be used for trace offload
+
+****** v++ v2022.1 (64-bit)
+  **** SW Build 3524075 on 2022-04-13-17:42:45
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+INFO: [v++ 60-1306] Additional information associated with this v++ link can be found at:
+	Reports: /pub/scratch/wenqi/graph-vector-search-on-FPGA/first_trial/_x.hw/reports/link
+	Log files: /pub/scratch/wenqi/graph-vector-search-on-FPGA/first_trial/_x.hw/logs/link
+Running Dispatch Server on port: 45017
+INFO: [v++ 60-1548] Creating build summary session with primary output /pub/scratch/wenqi/graph-vector-search-on-FPGA/first_trial/xclbin/vadd.hw.xclbin.link_summary, at Tue Feb 20 11:04:58 2024
+INFO: [v++ 60-1316] Initiating connection to rulecheck server, at Tue Feb 20 11:04:58 2024
+INFO: [v++ 60-1315] Creating rulecheck session with output '/pub/scratch/wenqi/graph-vector-search-on-FPGA/first_trial/_x.hw/reports/link/v++_link_vadd.hw_guidance.html', at Tue Feb 20 11:05:00 2024
+INFO: [v++ 60-895]   Target platform: /opt/xilinx/platforms/xilinx_u250_gen3x16_xdma_4_1_202210_1/xilinx_u250_gen3x16_xdma_4_1_202210_1.xpfm
+INFO: [v++ 60-1578]   This platform contains Xilinx Shell Archive '/opt/xilinx/platforms/xilinx_u250_gen3x16_xdma_4_1_202210_1/hw/hw.xsa'
+INFO: [v++ 74-78] Compiler Version string: 2022.1
+INFO: [v++ 82-4274] Default memory will be used for trace offload
+INFO: [v++ 60-629] Linking for hardware target
+INFO: [v++ 60-423]   Target device: xilinx_u250_gen3x16_xdma_4_1_202210_1
+INFO: [v++ 60-1332] Run 'run_link' status: Not started
+INFO: [v++ 60-1443] [11:05:08] Run run_link: Step system_link: Started
+INFO: [v++ 60-1453] Command Line: system_link --xo /pub/scratch/wenqi/graph-vector-search-on-FPGA/first_trial/xclbin/vadd.hw.xo -keep --config /pub/scratch/wenqi/graph-vector-search-on-FPGA/first_trial/_x.hw/link/int/syslinkConfig.ini --xpfm /opt/xilinx/platforms/xilinx_u250_gen3x16_xdma_4_1_202210_1/xilinx_u250_gen3x16_xdma_4_1_202210_1.xpfm --target hw --output_dir /pub/scratch/wenqi/graph-vector-search-on-FPGA/first_trial/_x.hw/link/int --temp_dir /pub/scratch/wenqi/graph-vector-search-on-FPGA/first_trial/_x.hw/link/sys_link
+INFO: [v++ 60-1454] Run Directory: /pub/scratch/wenqi/graph-vector-search-on-FPGA/first_trial/_x.hw/link/run_link
+INFO: [SYSTEM_LINK 60-1316] Initiating connection to rulecheck server, at Tue Feb 20 11:05:10 2024
+INFO: [SYSTEM_LINK 82-70] Extracting xo v3 file /pub/scratch/wenqi/graph-vector-search-on-FPGA/first_trial/xclbin/vadd.hw.xo
+INFO: [SYSTEM_LINK 82-53] Creating IP database /pub/scratch/wenqi/graph-vector-search-on-FPGA/first_trial/_x.hw/link/sys_link/_sysl/.cdb/xd_ip_db.xml
+INFO: [SYSTEM_LINK 82-38] [11:05:18] build_xd_ip_db started: /tools/Xilinx/Vitis/2022.1/bin/build_xd_ip_db -ip_search 0  -sds-pf /pub/scratch/wenqi/graph-vector-search-on-FPGA/first_trial/_x.hw/link/sys_link/hw.hpfm -clkid 0 -ip /pub/scratch/wenqi/graph-vector-search-on-FPGA/first_trial/_x.hw/link/sys_link/iprepo/xilinx_com_hls_vadd_1_0,vadd -o /pub/scratch/wenqi/graph-vector-search-on-FPGA/first_trial/_x.hw/link/sys_link/_sysl/.cdb/xd_ip_db.xml
+INFO: [SYSTEM_LINK 82-37] [11:05:26] build_xd_ip_db finished successfully
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 2269.578 ; gain = 0.000 ; free physical = 212530 ; free virtual = 327508
+INFO: [SYSTEM_LINK 82-51] Create system connectivity graph
+INFO: [SYSTEM_LINK 82-102] Applying explicit connections to the system connectivity graph: /pub/scratch/wenqi/graph-vector-search-on-FPGA/first_trial/_x.hw/link/sys_link/cfgraph/cfgen_cfgraph.xml
+INFO: [SYSTEM_LINK 82-38] [11:05:26] cfgen started: /tools/Xilinx/Vitis/2022.1/bin/cfgen  -nk vadd:1:vadd_1 -sp vadd_1.entry_vector:DDR[0] -sp vadd_1.query_vectors:DDR[0] -sp vadd_1.db_vectors:DDR[0] -sp vadd_1.ptr_to_upper_links:DDR[1] -sp vadd_1.links_upper:DDR[1] -sp vadd_1.links_base:DDR[1] -dmclkid 0 -r /pub/scratch/wenqi/graph-vector-search-on-FPGA/first_trial/_x.hw/link/sys_link/_sysl/.cdb/xd_ip_db.xml -o /pub/scratch/wenqi/graph-vector-search-on-FPGA/first_trial/_x.hw/link/sys_link/cfgraph/cfgen_cfgraph.xml
+INFO: [CFGEN 83-0] Kernel Specs: 
+INFO: [CFGEN 83-0]   kernel: vadd, num: 1  {vadd_1}
+INFO: [CFGEN 83-0] Port Specs: 
+INFO: [CFGEN 83-0]   kernel: vadd_1, k_port: entry_vector, sptag: DDR[0]
+INFO: [CFGEN 83-0]   kernel: vadd_1, k_port: query_vectors, sptag: DDR[0]
+INFO: [CFGEN 83-0]   kernel: vadd_1, k_port: db_vectors, sptag: DDR[0]
+INFO: [CFGEN 83-0]   kernel: vadd_1, k_port: ptr_to_upper_links, sptag: DDR[1]
+INFO: [CFGEN 83-0]   kernel: vadd_1, k_port: links_upper, sptag: DDR[1]
+INFO: [CFGEN 83-0]   kernel: vadd_1, k_port: links_base, sptag: DDR[1]
+INFO: [CFGEN 83-2226] Inferring mapping for argument vadd_1.out_id to DDR[0]
+INFO: [CFGEN 83-2226] Inferring mapping for argument vadd_1.out_dist to DDR[0]
+INFO: [SYSTEM_LINK 82-37] [11:05:31] cfgen finished successfully
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2269.578 ; gain = 0.000 ; free physical = 212492 ; free virtual = 327469
+INFO: [SYSTEM_LINK 82-52] Create top-level block diagram
+INFO: [SYSTEM_LINK 82-38] [11:05:31] cf2bd started: /tools/Xilinx/Vitis/2022.1/bin/cf2bd  --linux --trace_buffer 1024 --input_file /pub/scratch/wenqi/graph-vector-search-on-FPGA/first_trial/_x.hw/link/sys_link/cfgraph/cfgen_cfgraph.xml --ip_db /pub/scratch/wenqi/graph-vector-search-on-FPGA/first_trial/_x.hw/link/sys_link/_sysl/.cdb/xd_ip_db.xml --cf_name dr --working_dir /pub/scratch/wenqi/graph-vector-search-on-FPGA/first_trial/_x.hw/link/sys_link/_sysl/.xsd --temp_dir /pub/scratch/wenqi/graph-vector-search-on-FPGA/first_trial/_x.hw/link/sys_link --output_dir /pub/scratch/wenqi/graph-vector-search-on-FPGA/first_trial/_x.hw/link/int --target_bd ulp.bd
+INFO: [CF2BD 82-31] Launching cf2xd: cf2xd -linux -trace-buffer 1024 -i /pub/scratch/wenqi/graph-vector-search-on-FPGA/first_trial/_x.hw/link/sys_link/cfgraph/cfgen_cfgraph.xml -r /pub/scratch/wenqi/graph-vector-search-on-FPGA/first_trial/_x.hw/link/sys_link/_sysl/.cdb/xd_ip_db.xml -o dr.xml
+INFO: [CF2BD 82-28] cf2xd finished successfully
+INFO: [CF2BD 82-31] Launching cf_xsd: cf_xsd -disable-address-gen -bd ulp.bd -dn dr -dp /pub/scratch/wenqi/graph-vector-search-on-FPGA/first_trial/_x.hw/link/sys_link/_sysl/.xsd
+INFO: [CF2BD 82-28] cf_xsd finished successfully
+INFO: [SYSTEM_LINK 82-37] [11:05:36] cf2bd finished successfully
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2269.578 ; gain = 0.000 ; free physical = 211918 ; free virtual = 326893
+INFO: [v++ 60-1441] [11:05:36] Run run_link: Step system_link: Completed
+Time (s): cpu = 00:00:22 ; elapsed = 00:00:27 . Memory (MB): peak = 2180.523 ; gain = 0.000 ; free physical = 211966 ; free virtual = 326941
+INFO: [v++ 60-1443] [11:05:36] Run run_link: Step cf2sw: Started
+INFO: [v++ 60-1453] Command Line: cf2sw -sdsl /pub/scratch/wenqi/graph-vector-search-on-FPGA/first_trial/_x.hw/link/int/sdsl.dat -rtd /pub/scratch/wenqi/graph-vector-search-on-FPGA/first_trial/_x.hw/link/int/cf2sw.rtd -nofilter /pub/scratch/wenqi/graph-vector-search-on-FPGA/first_trial/_x.hw/link/int/cf2sw_full.rtd -xclbin /pub/scratch/wenqi/graph-vector-search-on-FPGA/first_trial/_x.hw/link/int/xclbin_orig.xml -o /pub/scratch/wenqi/graph-vector-search-on-FPGA/first_trial/_x.hw/link/int/xclbin_orig.1.xml
+INFO: [v++ 60-1454] Run Directory: /pub/scratch/wenqi/graph-vector-search-on-FPGA/first_trial/_x.hw/link/run_link
+INFO: [v++ 60-1441] [11:05:41] Run run_link: Step cf2sw: Completed
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2180.523 ; gain = 0.000 ; free physical = 211873 ; free virtual = 326849
+INFO: [v++ 60-1443] [11:05:41] Run run_link: Step rtd2_system_diagram: Started
+INFO: [v++ 60-1453] Command Line: rtd2SystemDiagram
+INFO: [v++ 60-1454] Run Directory: /pub/scratch/wenqi/graph-vector-search-on-FPGA/first_trial/_x.hw/link/run_link
+INFO: [v++ 60-1441] [11:05:41] Run run_link: Step rtd2_system_diagram: Completed
+Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.47 . Memory (MB): peak = 2180.523 ; gain = 0.000 ; free physical = 211809 ; free virtual = 326785
+INFO: [v++ 60-1443] [11:05:41] Run run_link: Step vpl: Started
+INFO: [v++ 60-1453] Command Line: vpl -t hw -f xilinx_u250_gen3x16_xdma_4_1_202210_1 -g --kernel_frequency 140 --remote_ip_cache /pub/scratch/wenqi/graph-vector-search-on-FPGA/first_trial/.ipcache -s --trace_memory DDR[0] --output_dir /pub/scratch/wenqi/graph-vector-search-on-FPGA/first_trial/_x.hw/link/int --log_dir /pub/scratch/wenqi/graph-vector-search-on-FPGA/first_trial/_x.hw/logs/link --report_dir /pub/scratch/wenqi/graph-vector-search-on-FPGA/first_trial/_x.hw/reports/link --config /pub/scratch/wenqi/graph-vector-search-on-FPGA/first_trial/_x.hw/link/int/vplConfig.ini -k /pub/scratch/wenqi/graph-vector-search-on-FPGA/first_trial/_x.hw/link/int/kernel_info.dat --webtalk_flag Vitis --temp_dir /pub/scratch/wenqi/graph-vector-search-on-FPGA/first_trial/_x.hw/link --no-info --iprepo /pub/scratch/wenqi/graph-vector-search-on-FPGA/first_trial/_x.hw/link/int/xo/ip_repo/xilinx_com_hls_vadd_1_0 --messageDb /pub/scratch/wenqi/graph-vector-search-on-FPGA/first_trial/_x.hw/link/run_link/vpl.pb /pub/scratch/wenqi/graph-vector-search-on-FPGA/first_trial/_x.hw/link/int/dr.bd.tcl
+INFO: [v++ 60-1454] Run Directory: /pub/scratch/wenqi/graph-vector-search-on-FPGA/first_trial/_x.hw/link/run_link
+
+****** vpl v2022.1 (64-bit)
+  **** SW Build 3524075 on 2022-04-13-17:42:45
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+INFO: [VPL 60-839] Read in kernel information from file '/pub/scratch/wenqi/graph-vector-search-on-FPGA/first_trial/_x.hw/link/int/kernel_info.dat'.
+INFO: [VPL 74-78] Compiler Version string: 2022.1
+INFO: [VPL 60-423]   Target device: xilinx_u250_gen3x16_xdma_4_1_202210_1
+INFO: [VPL 82-4282] Memory used for trace offload is DDR 0 
+INFO: [VPL 60-1032] Extracting hardware platform to /pub/scratch/wenqi/graph-vector-search-on-FPGA/first_trial/_x.hw/link/vivado/vpl/.local/hw_platform
+[11:06:00] Run vpl: Step create_project: Started
+Creating Vivado project.
+[11:06:05] Run vpl: Step create_project: Completed
+[11:06:05] Run vpl: Step create_bd: Started
+[11:06:47] Run vpl: Step create_bd: Completed
+[11:06:47] Run vpl: Step update_bd: Started
+WARNING: [VPL-1] The use of profile options turned on trace, which uses a memory resource in one SLR; however kernels or compute units could potentially be located in multiple SLRs. This may impact timing due to SLR crossing. To improve timing, please consider implementing trace memory in every SLRs used via the linker option: --profile.trace_memory <memory>:<SLR>. SLRs present on the design : SLR0 SLR1 SLR2 SLR3
+[11:06:55] Run vpl: Step update_bd: Completed
+[11:06:55] Run vpl: Step generate_target: Started
+[11:08:12] Run vpl: Step generate_target: RUNNING...
+[11:09:35] Run vpl: Step generate_target: RUNNING...
+[11:09:37] Run vpl: Step generate_target: Completed
+[11:09:37] Run vpl: Step config_hw_runs: Started
+[11:09:56] Run vpl: Step config_hw_runs: Completed
+[11:09:56] Run vpl: Step synth: Started
+[11:11:05] Block-level synthesis in progress, 0 of 77 jobs complete, 6 jobs running.
+[11:11:38] Block-level synthesis in progress, 0 of 77 jobs complete, 6 jobs running.
+[11:12:12] Block-level synthesis in progress, 6 of 77 jobs complete, 8 jobs running.
+[11:12:44] Block-level synthesis in progress, 22 of 77 jobs complete, 0 jobs running.
+[11:13:18] Block-level synthesis in progress, 30 of 77 jobs complete, 8 jobs running.
+[11:13:51] Block-level synthesis in progress, 46 of 77 jobs complete, 0 jobs running.
+[11:14:24] Block-level synthesis in progress, 54 of 77 jobs complete, 8 jobs running.
+[11:14:57] Block-level synthesis in progress, 70 of 77 jobs complete, 0 jobs running.
+[11:15:31] Block-level synthesis in progress, 76 of 77 jobs complete, 1 job running.
+[11:16:03] Block-level synthesis in progress, 76 of 77 jobs complete, 1 job running.
+[11:16:35] Block-level synthesis in progress, 76 of 77 jobs complete, 1 job running.
+[11:17:09] Block-level synthesis in progress, 76 of 77 jobs complete, 1 job running.
+[11:17:42] Block-level synthesis in progress, 77 of 77 jobs complete, 0 jobs running.
+[11:17:46] Run vpl: Step synth: Completed
+[11:17:46] Run vpl: Step impl: Started
+[11:19:36] Run vpl: Step impl: Failed
+[11:19:38] Run vpl: FINISHED. Run Status: impl ERROR
+
+===>The following messages were generated while processing /pub/scratch/wenqi/graph-vector-search-on-FPGA/first_trial/_x.hw/link/vivado/vpl/prj/prj.runs/impl_1 :
+ERROR: [VPL 20-105] Parse error on or above line 844. EDIF file was not written properly by 'Vivado'
+ERROR: [VPL 60-773] In '/pub/scratch/wenqi/graph-vector-search-on-FPGA/first_trial/_x.hw/link/vivado/vpl/runme.log', caught Tcl error:  problem implementing dynamic region, impl_1: Design Initialization ERROR, please look at the run log file '/pub/scratch/wenqi/graph-vector-search-on-FPGA/first_trial/_x.hw/link/vivado/vpl/prj/prj.runs/impl_1/runme.log' for more information
+ERROR: [VPL 60-704] Integration error, problem implementing dynamic region, impl_1: Design Initialization ERROR, please look at the run log file '/pub/scratch/wenqi/graph-vector-search-on-FPGA/first_trial/_x.hw/link/vivado/vpl/prj/prj.runs/impl_1/runme.log' for more information
+ERROR: [VPL 60-1328] Vpl run 'vpl' failed
+ERROR: [VPL 60-806] Failed to finish platform linker
+INFO: [v++ 60-1442] [11:19:44] Run run_link: Step vpl: Failed
+Time (s): cpu = 00:00:15 ; elapsed = 00:14:03 . Memory (MB): peak = 2180.523 ; gain = 0.000 ; free physical = 209079 ; free virtual = 324831
+ERROR: [v++ 60-661] v++ link run 'run_link' failed
+ERROR: [v++ 60-626] Kernel link failed to complete
+ERROR: [v++ 60-703] Failed to finish linking
+INFO: [v++ 60-1653] Closing dispatch client.
+make: *** [Makefile:82: xclbin/vadd.hw.xclbin] Error 1

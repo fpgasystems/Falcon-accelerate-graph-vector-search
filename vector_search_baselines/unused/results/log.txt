@@ -1,0 +1,804 @@
+multicand: 1 multithread: 1 M: 16 ef: 200
+0.905951	586.543
+
+multicand: 1 multithread: 1 M: 16 ef: 230
+0.915141	663.016
+
+multicand: 1 multithread: 1 M: 16 ef: 260
+0.922076	738.662
+
+multicand: 1 multithread: 1 M: 16 ef: 290
+0.927627	813.368
+
+multicand: 1 multithread: 1 M: 16 ef: 320
+0.931956	888.605
+
+multicand: 1 multithread: 1 M: 16 ef: 350
+0.935525	962.152
+
+multicand: 1 multithread: 1 M: 16 ef: 380
+0.938361	1035.82
+
+multicand: 1 multithread: 1 M: 16 ef: 410
+0.940803	1109.19
+
+multicand: 1 multithread: 1 M: 16 ef: 440
+0.942785	1182
+
+multicand: 1 multithread: 1 M: 16 ef: 470
+0.94449	1254.41
+
+multicand: 1 multithread: 1 M: 16 ef: 500
+0.946	1326.51
+
+multicand: 1 multithread: 1 M: 16 ef: 530
+0.947277	1398.67
+
+multicand: 1 multithread: 1 M: 16 ef: 560
+0.94838	1469.7
+
+multicand: 1 multithread: 1 M: 16 ef: 590
+0.949418	1541.81
+
+multicand: 1 multithread: 1 M: 16 ef: 620
+0.950248	1612.7
+
+multicand: 1 multithread: 1 M: 16 ef: 650
+0.95099	1683.86
+
+multicand: 2 multithread: 1 M: 16 ef: 200
+0.906088	491.522
+
+multicand: 2 multithread: 1 M: 16 ef: 230
+0.915256	552.31
+
+multicand: 2 multithread: 1 M: 16 ef: 260
+0.922147	613.637
+
+multicand: 2 multithread: 1 M: 16 ef: 290
+0.927695	673.682
+
+multicand: 2 multithread: 1 M: 16 ef: 320
+0.93201	733.476
+
+multicand: 2 multithread: 1 M: 16 ef: 350
+0.935565	793.067
+
+multicand: 2 multithread: 1 M: 16 ef: 380
+0.938392	852.599
+
+multicand: 2 multithread: 1 M: 16 ef: 410
+0.940833	911.108
+
+multicand: 2 multithread: 1 M: 16 ef: 440
+0.942812	969.104
+
+multicand: 2 multithread: 1 M: 16 ef: 470
+0.944508	1027.66
+
+multicand: 2 multithread: 1 M: 16 ef: 500
+0.94602	1085.99
+
+multicand: 2 multithread: 1 M: 16 ef: 530
+0.947298	1142.74
+
+multicand: 2 multithread: 1 M: 16 ef: 560
+0.948391	1199.39
+
+multicand: 2 multithread: 1 M: 16 ef: 590
+0.949429	1256.25
+
+multicand: 2 multithread: 1 M: 16 ef: 620
+0.950263	1312.48
+
+multicand: 2 multithread: 1 M: 16 ef: 650
+0.951003	1370.08
+
+multicand: 4 multithread: 1 M: 16 ef: 200
+0.906572	449.401
+
+multicand: 4 multithread: 1 M: 16 ef: 230
+0.915596	503.882
+
+multicand: 4 multithread: 1 M: 16 ef: 260
+0.922414	556.613
+
+multicand: 4 multithread: 1 M: 16 ef: 290
+0.927866	609.158
+
+multicand: 4 multithread: 1 M: 16 ef: 320
+0.932145	661.513
+
+multicand: 4 multithread: 1 M: 16 ef: 350
+0.935656	713.098
+
+multicand: 4 multithread: 1 M: 16 ef: 380
+0.938488	765.247
+
+multicand: 4 multithread: 1 M: 16 ef: 410
+0.940909	816.375
+
+multicand: 4 multithread: 1 M: 16 ef: 440
+0.942876	866.51
+
+multicand: 4 multithread: 1 M: 16 ef: 470
+0.944565	917.068
+
+multicand: 4 multithread: 1 M: 16 ef: 500
+0.946062	966.48
+
+multicand: 4 multithread: 1 M: 16 ef: 530
+0.947335	1016.78
+
+multicand: 4 multithread: 1 M: 16 ef: 560
+0.948434	1065.51
+
+multicand: 4 multithread: 1 M: 16 ef: 590
+0.949465	1115.41
+
+multicand: 4 multithread: 1 M: 16 ef: 620
+0.950296	1164.68
+
+multicand: 4 multithread: 1 M: 16 ef: 650
+0.951034	1213.93
+
+multicand: 8 multithread: 1 M: 16 ef: 200
+0.907463	441.654
+
+multicand: 8 multithread: 1 M: 16 ef: 230
+0.916201	490.192
+
+multicand: 8 multithread: 1 M: 16 ef: 260
+0.922911	538.856
+
+multicand: 8 multithread: 1 M: 16 ef: 290
+0.928248	586.838
+
+multicand: 8 multithread: 1 M: 16 ef: 320
+0.932429	634.292
+
+multicand: 8 multithread: 1 M: 16 ef: 350
+0.935888	681.326
+
+multicand: 8 multithread: 1 M: 16 ef: 380
+0.938672	728.087
+
+multicand: 8 multithread: 1 M: 16 ef: 410
+0.941065	775.009
+
+multicand: 8 multithread: 1 M: 16 ef: 440
+0.943022	820.767
+
+multicand: 8 multithread: 1 M: 16 ef: 470
+0.944694	866.816
+
+multicand: 8 multithread: 1 M: 16 ef: 500
+0.946146	911.971
+
+multicand: 8 multithread: 1 M: 16 ef: 530
+0.947406	953.8
+
+multicand: 8 multithread: 1 M: 16 ef: 560
+0.948498	999.294
+
+multicand: 8 multithread: 1 M: 16 ef: 590
+0.949515	1046.03
+
+multicand: 8 multithread: 1 M: 16 ef: 620
+0.950346	1091.93
+
+multicand: 8 multithread: 1 M: 16 ef: 650
+0.951079	1136.19
+
+multicand: 16 multithread: 1 M: 16 ef: 200
+0.90928	459.383
+
+multicand: 16 multithread: 1 M: 16 ef: 230
+0.9176	505.463
+
+multicand: 16 multithread: 1 M: 16 ef: 260
+0.92396	550.213
+
+multicand: 16 multithread: 1 M: 16 ef: 290
+0.928984	594.761
+
+multicand: 16 multithread: 1 M: 16 ef: 320
+0.933034	638.467
+
+multicand: 16 multithread: 1 M: 16 ef: 350
+0.936348	682.255
+
+multicand: 16 multithread: 1 M: 16 ef: 380
+0.939047	726.034
+
+multicand: 16 multithread: 1 M: 16 ef: 410
+0.941369	768.946
+
+multicand: 16 multithread: 1 M: 16 ef: 440
+0.943272	811.422
+
+multicand: 16 multithread: 1 M: 16 ef: 470
+0.944893	853.364
+
+multicand: 16 multithread: 1 M: 16 ef: 500
+0.946335	895.638
+
+multicand: 16 multithread: 1 M: 16 ef: 530
+0.947577	937.573
+
+multicand: 16 multithread: 1 M: 16 ef: 560
+0.94863	979.685
+
+multicand: 16 multithread: 1 M: 16 ef: 590
+0.949615	1021.05
+
+multicand: 16 multithread: 1 M: 16 ef: 620
+0.950435	1062.01
+
+multicand: 16 multithread: 1 M: 16 ef: 650
+0.951158	1103.7
+
+multicand: 2 multithread: 2 M: 16 ef: 200
+0.906627	469.029
+
+multicand: 2 multithread: 2 M: 16 ef: 230
+0.915825	525.425
+
+multicand: 2 multithread: 2 M: 16 ef: 260
+0.922707	583.325
+
+multicand: 2 multithread: 2 M: 16 ef: 290
+0.92825	636.958
+
+multicand: 2 multithread: 2 M: 16 ef: 320
+0.932575	690.108
+
+multicand: 2 multithread: 2 M: 16 ef: 350
+0.9361	750.208
+
+multicand: 2 multithread: 2 M: 16 ef: 380
+0.938944	803.388
+
+multicand: 2 multithread: 2 M: 16 ef: 410
+0.941367	857.463
+
+multicand: 2 multithread: 2 M: 16 ef: 440
+0.943392	915.201
+
+multicand: 2 multithread: 2 M: 16 ef: 470
+0.9451	967.342
+
+multicand: 2 multithread: 2 M: 16 ef: 500
+0.946569	1025.96
+
+multicand: 2 multithread: 2 M: 16 ef: 530
+0.947886	1078.74
+
+multicand: 2 multithread: 2 M: 16 ef: 560
+0.94898	1136.37
+
+multicand: 2 multithread: 2 M: 16 ef: 590
+0.950032	1189.39
+
+multicand: 2 multithread: 2 M: 16 ef: 620
+0.950835	1244.58
+
+multicand: 2 multithread: 2 M: 16 ef: 650
+0.951554	1297.14
+
+multicand: 4 multithread: 2 M: 16 ef: 200
+0.906993	389.868
+
+multicand: 4 multithread: 2 M: 16 ef: 230
+0.916004	434.054
+
+multicand: 4 multithread: 2 M: 16 ef: 260
+0.922806	475.548
+
+multicand: 4 multithread: 2 M: 16 ef: 290
+0.928329	517.821
+
+multicand: 4 multithread: 2 M: 16 ef: 320
+0.932598	563.894
+
+multicand: 4 multithread: 2 M: 16 ef: 350
+0.93609	607.754
+
+multicand: 4 multithread: 2 M: 16 ef: 380
+0.938897	648.738
+
+multicand: 4 multithread: 2 M: 16 ef: 410
+0.941328	692.134
+
+multicand: 4 multithread: 2 M: 16 ef: 440
+0.943297	734.072
+
+multicand: 4 multithread: 2 M: 16 ef: 470
+0.945002	778.55
+
+multicand: 4 multithread: 2 M: 16 ef: 500
+0.946503	819.657
+
+multicand: 4 multithread: 2 M: 16 ef: 530
+0.947801	863.152
+
+multicand: 4 multithread: 2 M: 16 ef: 560
+0.94891	903.103
+
+multicand: 4 multithread: 2 M: 16 ef: 590
+0.949902	946.847
+
+multicand: 4 multithread: 2 M: 16 ef: 620
+0.950706	990.974
+
+multicand: 4 multithread: 2 M: 16 ef: 650
+0.951457	1033.13
+
+multicand: 8 multithread: 2 M: 16 ef: 200
+0.907881	358.963
+
+multicand: 8 multithread: 2 M: 16 ef: 230
+0.916644	394.288
+
+multicand: 8 multithread: 2 M: 16 ef: 260
+0.923364	431.202
+
+multicand: 8 multithread: 2 M: 16 ef: 290
+0.928676	467.818
+
+multicand: 8 multithread: 2 M: 16 ef: 320
+0.932878	501.291
+
+multicand: 8 multithread: 2 M: 16 ef: 350
+0.936334	542.696
+
+multicand: 8 multithread: 2 M: 16 ef: 380
+0.939125	576.672
+
+multicand: 8 multithread: 2 M: 16 ef: 410
+0.941514	611.674
+
+multicand: 8 multithread: 2 M: 16 ef: 440
+0.943489	649.759
+
+multicand: 8 multithread: 2 M: 16 ef: 470
+0.945165	683.322
+
+multicand: 8 multithread: 2 M: 16 ef: 500
+0.946653	720.756
+
+multicand: 8 multithread: 2 M: 16 ef: 530
+0.947902	755.126
+
+multicand: 8 multithread: 2 M: 16 ef: 560
+0.948963	790.755
+
+multicand: 8 multithread: 2 M: 16 ef: 590
+0.950001	826.244
+
+multicand: 8 multithread: 2 M: 16 ef: 620
+0.950834	861.377
+
+multicand: 8 multithread: 2 M: 16 ef: 650
+0.951543	898.563
+
+multicand: 16 multithread: 2 M: 16 ef: 200
+0.909661	361.157
+
+multicand: 16 multithread: 2 M: 16 ef: 230
+0.917977	392.913
+
+multicand: 16 multithread: 2 M: 16 ef: 260
+0.924358	426.037
+
+multicand: 16 multithread: 2 M: 16 ef: 290
+0.929416	459.024
+
+multicand: 16 multithread: 2 M: 16 ef: 320
+0.933432	487.693
+
+multicand: 16 multithread: 2 M: 16 ef: 350
+0.936734	521.426
+
+multicand: 16 multithread: 2 M: 16 ef: 380
+0.939421	551.862
+
+multicand: 16 multithread: 2 M: 16 ef: 410
+0.94172	582.034
+
+multicand: 16 multithread: 2 M: 16 ef: 440
+0.943657	615.191
+
+multicand: 16 multithread: 2 M: 16 ef: 470
+0.945259	645.137
+
+multicand: 16 multithread: 2 M: 16 ef: 500
+0.946664	677.363
+
+multicand: 16 multithread: 2 M: 16 ef: 530
+0.947934	707.494
+
+multicand: 16 multithread: 2 M: 16 ef: 560
+0.949031	734.984
+
+multicand: 16 multithread: 2 M: 16 ef: 590
+0.94998	771.306
+
+multicand: 16 multithread: 2 M: 16 ef: 620
+0.950851	799.755
+
+multicand: 16 multithread: 2 M: 16 ef: 650
+0.951512	828.436
+
+multicand: 4 multithread: 4 M: 16 ef: 200
+0.909382	454.207
+
+multicand: 4 multithread: 4 M: 16 ef: 230
+0.918427	499.705
+
+multicand: 4 multithread: 4 M: 16 ef: 260
+0.925288	548.766
+
+multicand: 4 multithread: 4 M: 16 ef: 290
+0.9302	551.476
+
+multicand: 4 multithread: 4 M: 16 ef: 320
+0.934745	622.037
+
+multicand: 4 multithread: 4 M: 16 ef: 350
+0.937638	542.587
+
+multicand: 4 multithread: 4 M: 16 ef: 380
+0.940526	580.031
+
+multicand: 4 multithread: 4 M: 16 ef: 410
+0.942952	624.051
+
+multicand: 4 multithread: 4 M: 16 ef: 440
+0.945102	650.19
+
+multicand: 4 multithread: 4 M: 16 ef: 470
+0.94754	855.386
+
+multicand: 4 multithread: 4 M: 16 ef: 500
+0.949131	944.866
+
+multicand: 4 multithread: 4 M: 16 ef: 530
+0.949754	837.883
+
+multicand: 4 multithread: 4 M: 16 ef: 560
+0.950613	802.635
+
+multicand: 4 multithread: 4 M: 16 ef: 590
+0.951499	841.256
+
+multicand: 4 multithread: 4 M: 16 ef: 620
+0.952425	877.962
+
+multicand: 4 multithread: 4 M: 16 ef: 650
+0.953115	917.127
+
+multicand: 8 multithread: 4 M: 16 ef: 200
+0.909936	386.34
+
+multicand: 8 multithread: 4 M: 16 ef: 230
+0.918777	429.273
+
+multicand: 8 multithread: 4 M: 16 ef: 260
+0.924935	419.674
+
+multicand: 8 multithread: 4 M: 16 ef: 290
+0.929926	406.541
+
+multicand: 8 multithread: 4 M: 16 ef: 320
+0.934102	424.801
+
+multicand: 8 multithread: 4 M: 16 ef: 350
+0.937689	459.312
+
+multicand: 8 multithread: 4 M: 16 ef: 380
+0.940447	482.809
+
+multicand: 8 multithread: 4 M: 16 ef: 410
+0.942878	513.236
+
+multicand: 8 multithread: 4 M: 16 ef: 440
+0.944764	546.842
+
+multicand: 8 multithread: 4 M: 16 ef: 470
+0.946458	577.096
+
+multicand: 8 multithread: 4 M: 16 ef: 500
+0.947881	604.108
+
+multicand: 8 multithread: 4 M: 16 ef: 530
+0.949091	634.527
+
+multicand: 8 multithread: 4 M: 16 ef: 560
+0.950287	663.865
+
+multicand: 8 multithread: 4 M: 16 ef: 590
+0.951303	694.34
+
+multicand: 8 multithread: 4 M: 16 ef: 620
+0.952156	728.756
+
+multicand: 8 multithread: 4 M: 16 ef: 650
+0.95289	758.353
+
+multicand: 16 multithread: 4 M: 16 ef: 200
+0.911047	358.465
+
+multicand: 16 multithread: 4 M: 16 ef: 230
+0.919531	389.544
+
+multicand: 16 multithread: 4 M: 16 ef: 260
+0.92601	420.646
+
+multicand: 16 multithread: 4 M: 16 ef: 290
+0.930622	410.209
+
+multicand: 16 multithread: 4 M: 16 ef: 320
+0.93455	416.101
+
+multicand: 16 multithread: 4 M: 16 ef: 350
+0.937993	437.056
+
+multicand: 16 multithread: 4 M: 16 ef: 380
+0.940717	454.632
+
+multicand: 16 multithread: 4 M: 16 ef: 410
+0.943007	482.535
+
+multicand: 16 multithread: 4 M: 16 ef: 440
+0.944986	500.955
+
+multicand: 16 multithread: 4 M: 16 ef: 470
+0.946579	522.823
+
+multicand: 16 multithread: 4 M: 16 ef: 500
+0.94808	547.543
+
+multicand: 16 multithread: 4 M: 16 ef: 530
+0.949329	572.485
+
+multicand: 16 multithread: 4 M: 16 ef: 560
+0.950411	604.117
+
+multicand: 16 multithread: 4 M: 16 ef: 590
+0.95136	623.6
+
+multicand: 16 multithread: 4 M: 16 ef: 620
+0.952218	647.955
+
+multicand: 16 multithread: 4 M: 16 ef: 650
+0.953131	727.646
+
+multicand: 8 multithread: 8 M: 16 ef: 200
+0.91685	388.398
+
+multicand: 8 multithread: 8 M: 16 ef: 230
+0.9258	436.305
+
+multicand: 8 multithread: 8 M: 16 ef: 260
+0.932823	487.882
+
+multicand: 8 multithread: 8 M: 16 ef: 290
+0.938204	530.716
+
+multicand: 8 multithread: 8 M: 16 ef: 320
+0.942545	560.166
+
+multicand: 8 multithread: 8 M: 16 ef: 350
+0.946229	600.881
+
+multicand: 8 multithread: 8 M: 16 ef: 380
+0.949139	646.304
+
+multicand: 8 multithread: 8 M: 16 ef: 410
+0.951379	683.521
+
+multicand: 8 multithread: 8 M: 16 ef: 440
+0.953567	724.911
+
+multicand: 8 multithread: 8 M: 16 ef: 470
+0.955398	760.943
+
+multicand: 8 multithread: 8 M: 16 ef: 500
+0.956697	810.398
+
+multicand: 8 multithread: 8 M: 16 ef: 530
+0.957629	847.659
+
+multicand: 8 multithread: 8 M: 16 ef: 560
+0.958591	887.539
+
+multicand: 8 multithread: 8 M: 16 ef: 590
+0.959729	928.911
+
+multicand: 8 multithread: 8 M: 16 ef: 620
+0.960473	970.273
+
+multicand: 8 multithread: 8 M: 16 ef: 650
+0.961272	1013.12
+
+multicand: 16 multithread: 8 M: 16 ef: 200
+0.915119	352.284
+
+multicand: 16 multithread: 8 M: 16 ef: 230
+0.92386	387.987
+
+multicand: 16 multithread: 8 M: 16 ef: 260
+0.931294	425.284
+
+multicand: 16 multithread: 8 M: 16 ef: 290
+0.936395	461.877
+
+multicand: 16 multithread: 8 M: 16 ef: 320
+0.940559	493.182
+
+multicand: 16 multithread: 8 M: 16 ef: 350
+0.943941	519.637
+
+multicand: 16 multithread: 8 M: 16 ef: 380
+0.94677	545.692
+
+multicand: 16 multithread: 8 M: 16 ef: 410
+0.949058	583.616
+
+multicand: 16 multithread: 8 M: 16 ef: 440
+0.951115	607.839
+
+multicand: 16 multithread: 8 M: 16 ef: 470
+0.952864	639.423
+
+multicand: 16 multithread: 8 M: 16 ef: 500
+0.954354	670.602
+
+multicand: 16 multithread: 8 M: 16 ef: 530
+0.955546	702.053
+
+multicand: 16 multithread: 8 M: 16 ef: 560
+0.956659	733.755
+
+multicand: 16 multithread: 8 M: 16 ef: 590
+0.957692	770.352
+
+multicand: 16 multithread: 8 M: 16 ef: 620
+0.958455	800.434
+
+multicand: 16 multithread: 8 M: 16 ef: 650
+0.959051	826.037
+
+multicand: 16 multithread: 16 M: 16 ef: 200
+0.921406	371.521
+
+multicand: 16 multithread: 16 M: 16 ef: 230
+0.930547	408.458
+
+multicand: 16 multithread: 16 M: 16 ef: 260
+0.93688	435.727
+
+multicand: 16 multithread: 16 M: 16 ef: 290
+0.942584	470.511
+
+multicand: 16 multithread: 16 M: 16 ef: 320
+0.946976	499.04
+
+multicand: 16 multithread: 16 M: 16 ef: 350
+0.950146	533.082
+
+multicand: 16 multithread: 16 M: 16 ef: 380
+0.953202	562.24
+
+multicand: 16 multithread: 16 M: 16 ef: 410
+0.955338	586.052
+
+multicand: 16 multithread: 16 M: 16 ef: 440
+0.95715	618.01
+
+multicand: 16 multithread: 16 M: 16 ef: 470
+0.958925	651.681
+
+multicand: 16 multithread: 16 M: 16 ef: 500
+0.960433	682.904
+
+multicand: 16 multithread: 16 M: 16 ef: 530
+0.96151	717.92
+
+multicand: 16 multithread: 16 M: 16 ef: 560
+0.962447	744.892
+
+multicand: 16 multithread: 16 M: 16 ef: 590
+0.963305	791.076
+
+multicand: 16 multithread: 16 M: 16 ef: 620
+0.964074	810.268
+
+multicand: 16 multithread: 16 M: 16 ef: 650
+0.964921	842.593
+
+multicand: 1 multithread: 1 M: 16 ef: 200
+0.905951	386.895
+
+multicand: 1 multithread: 1 M: 16 ef: 230
+0.915141	432.594
+
+multicand: 1 multithread: 1 M: 16 ef: 260
+0.922076	480.097
+
+multicand: 1 multithread: 1 M: 16 ef: 290
+0.927627	525.48
+
+multicand: 1 multithread: 1 M: 16 ef: 320
+0.931956	570.906
+
+multicand: 1 multithread: 1 M: 16 ef: 350
+0.935525	615.282
+
+multicand: 1 multithread: 1 M: 16 ef: 380
+0.938361	659.965
+
+multicand: 1 multithread: 1 M: 16 ef: 410
+0.940803	706.049
+
+multicand: 1 multithread: 1 M: 16 ef: 440
+0.942785	746.663
+
+multicand: 1 multithread: 1 M: 16 ef: 470
+0.94449	791.673
+
+multicand: 1 multithread: 1 M: 16 ef: 500
+0.946	837.663
+
+multicand: 1 multithread: 1 M: 16 ef: 530
+0.947277	881.326
+
+multicand: 1 multithread: 1 M: 16 ef: 560
+0.94838	924.126
+
+multicand: 1 multithread: 1 M: 16 ef: 590
+0.949418	967.537
+
+multicand: 1 multithread: 1 M: 16 ef: 620
+0.950248	1006.01
+
+multicand: 1 multithread: 1 M: 16 ef: 650
+0.95099	1048.73
+
+multicand: 4 multithread: 1 M: 16 ef: 200
+0.906572	371.704
+
+multicand: 4 multithread: 1 M: 16 ef: 230
+0.915596	415.784
+
+multicand: 4 multithread: 1 M: 16 ef: 260
+0.922414	458.284
+
+multicand: 4 multithread: 1 M: 16 ef: 290
+0.927866	500.406
+
+multicand: 4 multithread: 1 M: 16 ef: 320
+0.932145	542.468
+
+multicand: 4 multithread: 1 M: 16 ef: 350
+0.935656	584.292
+
+multicand: 4 multithread: 1 M: 16 ef: 380
+0.938488	626.111
+
+multicand: 4 multithread: 1 M: 16 ef: 410
+0.940909	667.159
+
+multicand: 4 multithread: 1 M: 16 ef: 440
+0.942876	707.788
+
+multicand: 4 multithread: 1 M: 16 ef: 470
+0.944565	747.72
+
+multicand: 4 multithread: 1 M: 16 ef: 400
+0.94	2273
+
+multicand: 1 multithread: 1 M: 16 ef: 400
+0.940033	682.041
+

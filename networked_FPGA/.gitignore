@@ -1,0 +1,10 @@
+build*
+_x*
+host/host
+packaged_kernel*
+scripts/
+tmp_kernel*
+*.log
+*.jou
+.ipcache
+.vscode

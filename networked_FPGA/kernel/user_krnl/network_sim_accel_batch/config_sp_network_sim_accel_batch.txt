@@ -1,0 +1,97 @@
+kernel_frequency=140
+
+[hls]
+# HLS pipeline flush: https://docs.xilinx.com/r/en-US/ug1399-vitis-hls/Flushing-Pipelines
+# Use HLS command in a tcl file: https://docs.xilinx.com/r/en-US/ug1393-vitis-application-acceleration/hls-Options
+# HLS config_compile command: https://docs.xilinx.com/r/en-US/ug1399-vitis-hls/config_compile
+pre_tcl=kernel/user_krnl/network_sim_accel_batch/pipelineConfig.tcl
+
+[connectivity] 
+
+# QSFP on SLR2; distance LUT -> SLR3, 2, 1, 0 -> K-selection at SLR 0, 1 -> network to SLR2
+# PCIe at SLR0
+# U250 data sheet: https://docs.xilinx.com/v/u/en-US/ds962-u200-u250
+
+slr=cmac_krnl_1:SLR2
+
+sp=network_sim_accel_batch_1.in_DDR:DDR[0]
+
+sc=network_krnl_1.m_axis_udp_rx:network_sim_accel_batch_1.s_axis_udp_rx
+sc=network_krnl_1.m_axis_udp_rx_meta:network_sim_accel_batch_1.s_axis_udp_rx_meta
+sc=network_krnl_1.m_axis_tcp_port_status:network_sim_accel_batch_1.s_axis_tcp_port_status
+sc=network_krnl_1.m_axis_tcp_open_status:network_sim_accel_batch_1.s_axis_tcp_open_status
+sc=network_krnl_1.m_axis_tcp_notification:network_sim_accel_batch_1.s_axis_tcp_notification
+sc=network_krnl_1.m_axis_tcp_rx_meta:network_sim_accel_batch_1.s_axis_tcp_rx_meta
+sc=network_krnl_1.m_axis_tcp_rx_data:network_sim_accel_batch_1.s_axis_tcp_rx_data
+sc=network_krnl_1.m_axis_tcp_tx_status:network_sim_accel_batch_1.s_axis_tcp_tx_status
+
+sc=network_sim_accel_batch_1.m_axis_udp_tx:network_krnl_1.s_axis_udp_tx
+sc=network_sim_accel_batch_1.m_axis_udp_tx_meta:network_krnl_1.s_axis_udp_tx_meta
+sc=network_sim_accel_batch_1.m_axis_tcp_listen_port:network_krnl_1.s_axis_tcp_listen_port
+sc=network_sim_accel_batch_1.m_axis_tcp_open_connection:network_krnl_1.s_axis_tcp_open_connection
+sc=network_sim_accel_batch_1.m_axis_tcp_close_connection:network_krnl_1.s_axis_tcp_close_connection
+sc=network_sim_accel_batch_1.m_axis_tcp_read_pkg:network_krnl_1.s_axis_tcp_read_pkg
+sc=network_sim_accel_batch_1.m_axis_tcp_tx_meta:network_krnl_1.s_axis_tcp_tx_meta
+sc=network_sim_accel_batch_1.m_axis_tcp_tx_data:network_krnl_1.s_axis_tcp_tx_data
+
+sc=cmac_krnl_1.axis_net_rx:network_krnl_1.axis_net_rx
+sc=network_krnl_1.axis_net_tx:cmac_krnl_1.axis_net_tx
+
+
+[vivado] 
+
+##### Enable one of the following strategies by uncomment the options #####
+
+# param=project.writeIntermediateCheckpoints=true
+
+prop=run.impl_1.strategy=Performance_SpreadSLLs
+# prop=run.impl_1.strategy=Performance_BalanceSLLs
+# prop=run.impl_1.strategy=Congestion_SSI_SpreadLogic_high
+
+### Strategy Performance_SpreadSLL ###
+# A placement variation for SSI devices with tendency to spread SLR crossings horizontally.
+# prop=run.impl_1.STEPS.PLACE_DESIGN.ARGS.DIRECTIVE=SSI_SpreadSLLs
+# prop=run.impl_1.{STEPS.PHYS_OPT_DESIGN.IS_ENABLED}=true
+# prop=run.impl_1.STEPS.PHYS_OPT_DESIGN.ARGS.DIRECTIVE=Explore
+# prop=run.impl_1.STEPS.ROUTE_DESIGN.ARGS.DIRECTIVE=Explore
+# prop=run.impl_1.{STEPS.POST_ROUTE_PHYS_OPT_DESIGN.IS_ENABLED}=true
+# prop=run.impl_1.{STEPS.POST_ROUTE_PHYS_OPT_DESIGN.ARGS.MORE OPTIONS}={-critical_cell_opt -rewire -hold_fix -sll_reg_hold_fix -retime}
+
+
+### Strategy Performance_BalanceSLL ###
+# A placement variation for SSI devices with more frequent crossings of SLR boundaries.
+# prop=run.impl_1.STEPS.PLACE_DESIGN.ARGS.DIRECTIVE=SSI_BalanceSLLs
+# prop=run.impl_1.{STEPS.PHYS_OPT_DESIGN.IS_ENABLED}=true
+# prop=run.impl_1.STEPS.PHYS_OPT_DESIGN.ARGS.DIRECTIVE=Explore
+# prop=run.impl_1.STEPS.ROUTE_DESIGN.ARGS.DIRECTIVE=Explore
+# prop=run.impl_1.{STEPS.POST_ROUTE_PHYS_OPT_DESIGN.IS_ENABLED}=true
+# prop=run.impl_1.{STEPS.POST_ROUTE_PHYS_OPT_DESIGN.ARGS.MORE OPTIONS}={-critical_cell_opt -rewire -hold_fix -sll_reg_hold_fix -retime}
+
+
+### Strategy Congestion_SSI_SpreadLogic_high ###
+# Spread logic throughout the device to avoid creating congested regions, intended for SSI devices (high setting is the highest degree of spreading).
+# prop=run.impl_1.STEPS.PLACE_DESIGN.ARGS.DIRECTIVE=SSI_SpreadLogic_high
+# prop=run.impl_1.{STEPS.PHYS_OPT_DESIGN.IS_ENABLED}=true
+# prop=run.impl_1.STEPS.PHYS_OPT_DESIGN.ARGS.DIRECTIVE=AggressiveExplore
+# prop=run.impl_1.STEPS.ROUTE_DESIGN.ARGS.DIRECTIVE=AlternateCLBRouting
+# prop=run.impl_1.{STEPS.POST_ROUTE_PHYS_OPT_DESIGN.IS_ENABLED}=true
+# prop=run.impl_1.{STEPS.POST_ROUTE_PHYS_OPT_DESIGN.ARGS.MORE OPTIONS}={-critical_cell_opt -rewire -hold_fix -sll_reg_hold_fix -retime}
+
+### Other options ###
+# param=compiler.userPreSysLinkTcl=$(PWD)/tcl/plram.tcl 
+# param=route.enableGlobalHoldIter=true
+# param=project.writeIntermediateCheckpoints=true
+# prop=run.impl_1.STEPS.PLACE_DESIGN.ARGS.DIRECTIVE=Explore
+# prop=run.impl_1.STEPS.PLACE_DESIGN.ARGS.DIRECTIVE=SSI_SpreadLogic_high
+# prop=run.impl_1.{STEPS.PLACE_DESIGN.ARGS.MORE OPTIONS}={-post_place_opt}
+# prop=run.impl_1.{STEPS.PHYS_OPT_DESIGN.IS_ENABLED}=true 
+# prop=run.impl_1.STEPS.PHYS_OPT_DESIGN.ARGS.DIRECTIVE=ExploreWithHoldFix
+# prop=run.impl_1.{STEPS.PHYS_OPT_DESIGN.ARGS.MORE OPTIONS}={-fanout_opt -critical_cell_opt -rewire -slr_crossing_opt -tns_cleanup -hold_fix -sll_reg_hold_fix -retime}
+# prop=run.impl_1.{STEPS.PHYS_OPT_DESIGN.ARGS.MORE OPTIONS}={-placement_opt -critical_cell_opt}
+#prop=run.impl_1.{STEPS.PHYS_OPT_DESIGN.ARGS.MORE OPTIONS}={-hold_fix -slr_crossing_opt}
+# prop=run.impl_1.STEPS.ROUTE_DESIGN.ARGS.DIRECTIVE=Explore
+# prop=run.impl_1.STEPS.ROUTE_DESIGN.ARGS.DIRECTIVE=AlternateCLBRouting 
+#prop=run.impl_1.{STEPS.PHYS_OPT_DESIGN.ARGS.MORE OPTIONS}={-hold_fix}
+# prop=run.impl_1.{STEPS.POST_ROUTE_PHYS_OPT_DESIGN.IS_ENABLED}=true 
+# prop=run.impl_1.{STEPS.POST_ROUTE_PHYS_OPT_DESIGN.ARGS.MORE OPTIONS}={-critical_cell_opt -rewire -hold_fix -sll_reg_hold_fix -retime}
+#prop=run.impl_1.{STEPS.POST_ROUTE_PHYS_OPT_DESIGN.ARGS.MORE OPTIONS}={-critical_cell_opt -rewire -slr_crossing_opt -tns_cleanup -hold_fix -sll_reg_hold_fix -retime}

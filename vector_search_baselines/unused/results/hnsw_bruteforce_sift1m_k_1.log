@@ -1,0 +1,11 @@
+Loading GT:
+Loading queries:
+Loading index from sift1m_bruteforce.bin:
+Actual memory usage: 145 Mb 
+Parsing gt:
+10000
+Loaded gt
+qps: 42.387
+recall: 0.9914
+FLOPS per cycle: 4.66378
+Actual memory usage: 145 Mb

@@ -1,0 +1,41 @@
+# A list of IP addresses: 
+#   hacc-build-01: 10.1.212.110
+#   alveo-u250-01: 10.253.74.12
+#   alveo-u250-02: 10.253.74.16
+#   alveo-u250-03: 10.253.74.20
+#   alveo-u250-04: 10.253.74.24
+#   alveo-u250-05: 10.253.74.28
+#   alveo-u250-06: 10.253.74.40
+
+num_FPGA : 2
+
+# CPU_IP_addr : "127.0.0.1"
+CPU_IP_addr : "10.1.212.110"
+# FPGA_IP_addr_list : ["127.0.0.1", "127.0.0.1"]
+FPGA_IP_addr_list : ["10.253.74.16", "10.253.74.20"]
+C2F_port_list: [8882, 8883]
+F2C_port_list: [5002, 5003]
+G2C_port: 9091 # only used for FPGA coordinator
+
+# Fixed parameters
+D: 512
+nprobe: 32
+nlist: 32768
+
+# query window size controls the communication between CPU and FPGA
+# this number shouldn't be set to too large, otherwise the FPGA will be overwhelmed by retranmissions
+query_window_size: 2
+
+# batch window size controls the speed of index scan on CPU 
+batch_window_size: 2
+
+
+# enable_index_scan controls whether to enable index scan on CPU
+enable_index_scan: 0 # used only in CPU_index_server
+# CPU cores used for the entire CPU program
+cpu_cores: 8 # used only in CPU_index_server
+
+# Tunable parameters at runtime
+TOPK: 100
+batch_size: 1
+total_batch_num: 105
