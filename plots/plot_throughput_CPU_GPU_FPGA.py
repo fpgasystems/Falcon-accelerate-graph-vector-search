@@ -7,6 +7,7 @@ import pandas as pd
 import os
 import seaborn as sns 
 
+plt.rcParams['pdf.fonttype'] = 42
 # plt.style.use('ggplot')
 # plt.style.use('seaborn-pastel') 
 # plt.style.use('seaborn-colorblind') 
@@ -305,7 +306,10 @@ def plot_throughput(datasets=["SIFT10M", "Deep10M"], graph_types=["HNSW", "NSG"]
     width = 0.1  # the width of the bars
 
     # two subplots (top and down), share the x axis
-    fig, (ax, ax_norm) = plt.subplots(2, 1, figsize=(18, 3))
+    # for presetation, large fig
+    # fig, (ax, ax_norm) = plt.subplots(2, 1, figsize=(18, 3))
+    # for paper, small fig:
+    fig, (ax, ax_norm) = plt.subplots(2, 1, figsize=(9, 3))
     fig.subplots_adjust(hspace=0.1)
     ax_norm.get_shared_x_axes().join(ax, ax_norm)
 
@@ -365,12 +369,13 @@ def plot_throughput(datasets=["SIFT10M", "Deep10M"], graph_types=["HNSW", "NSG"]
     ax.set_xticks([])
     ax_norm.set_xticks(x)
     ax_norm.set_xticklabels(x_labels_with_recall, rotation=0, fontsize=tick_font)
-    ax.legend([rects_fpga_inter, rects_fpga_intra, rects_cpu, rects_cpu_faiss, rects_gpu, rects_gpu_faiss], 
-              [ "Falcon (Across-query)", "Falcon (Intra-query)", "CPU (Graph)", "CPU (IVF)", "GPU (Graph)", "GPU (IVF)", ], loc=(0.1, 1.02), ncol=6, \
-        facecolor='white', framealpha=1, frameon=False, fontsize=legend_font)
     # ax.legend([rects_fpga_inter, rects_fpga_intra, rects_cpu, rects_cpu_faiss, rects_gpu, rects_gpu_faiss], 
-    #           [ "Falcon (Across-query)", "Falcon (Intra-query)", "CPU (Graph)", "CPU (IVF)", "GPU (Graph)", "GPU (IVF)", ], loc=(0.2, 1.0), ncol=3, \
-    #     facecolor='white', framealpha=1, frameon=False, fontsize=legend_font)
+    #          [ "Falcon (Across-query)", "Falcon (Intra-query)", "CPU (Graph)", "CPU (IVF)", "GPU (Graph)", "GPU (IVF)", ], loc=(0.1, 1.02), ncol=6, \
+    #    facecolor='white', framealpha=1, frameon=False, fontsize=legend_font)
+    # small fig:
+    ax.legend([rects_fpga_inter, rects_fpga_intra, rects_cpu, rects_cpu_faiss, rects_gpu, rects_gpu_faiss], 
+              [ "Falcon (Across-query)", "Falcon (Intra-query)", "CPU (Graph)", "CPU (IVF)", "GPU (Graph)", "GPU (IVF)", ], loc=(0.05, 1.0), ncol=3, \
+        facecolor='white', framealpha=1, frameon=False, fontsize=legend_font)
 
     def autolabel(rects, ax=ax):
         """Attach a text label above each bar in *rects*, displaying its height."""

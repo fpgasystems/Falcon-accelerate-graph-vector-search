@@ -6,6 +6,7 @@ import numpy as np
 
 import seaborn as sns 
 
+plt.rcParams['pdf.fonttype'] = 42
 # Seaborn version >= 0.11.0
 
 sns.set_theme(style="whitegrid")

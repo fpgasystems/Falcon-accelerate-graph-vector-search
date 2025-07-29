@@ -33,6 +33,7 @@ parser.add_argument('--max_mg', type=int, default=6, help="max mg")
 
 args = parser.parse_args()
 
+plt.rcParams['pdf.fonttype'] = 42
 
 def plot_heatmap(df, graph_type, dataset, max_degree, ef, suffix='inter_query', max_mg=6, max_mc=3, show_title=True):
 

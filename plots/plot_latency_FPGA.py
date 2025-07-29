@@ -12,6 +12,7 @@ import seaborn as sns
 sns.set_theme(style="whitegrid")
 # Set the palette to the "pastel" default palette:
 # sns.set_palette("pastel")
+plt.rcParams['pdf.fonttype'] = 42
 
 def plot_latency(dataset='SIFT1M', graph_type="HNSW", max_degree=64, ef=64, batch_sizes=[1,2,4,8,16,32]):
 

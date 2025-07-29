@@ -7,6 +7,8 @@ from matplotlib.ticker import FuncFormatter
 plt.style.use('seaborn-pastel')
 # plt.style.use('seaborn-colorblind')
 
+plt.rcParams['pdf.fonttype'] = 42
+
 default_colors = []
 for i, color in enumerate(plt.rcParams['axes.prop_cycle']):
     default_colors.append(color["color"])

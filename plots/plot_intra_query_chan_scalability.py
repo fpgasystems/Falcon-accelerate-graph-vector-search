@@ -26,6 +26,8 @@ import seaborn as sns
 # plt.style.use('seaborn-colorblind')
 plt.style.use('seaborn-pastel')
 
+plt.rcParams['pdf.fonttype'] = 42
+
 parser = argparse.ArgumentParser()
 
 parser.add_argument('--df_path_1_chan', type=str, default="perf_df_1_chan.pickle", help="the performance pickle file to save the dataframe")

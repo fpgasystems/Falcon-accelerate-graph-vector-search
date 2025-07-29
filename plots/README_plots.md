@@ -76,3 +76,13 @@ python plot_subgraph_vs_full_graph.py --dataset SPACEV1M --min_recall 0.85 --max
 python plot_subgraph_vs_full_graph.py --dataset SIFT1M --min_recall 0.96 --max_recall 0.995 --comparison_recall 0.99
 python plot_subgraph_vs_full_graph.py --dataset Deep1M --min_recall 0.95 --max_recall 0.995 --comparison_recall 0.9
 ```
+
+DLRM e2e:
+```
+python plot_dlrm_profile.py
+```
+
+RAG e2e:
+```
+python plot_llm_profile.py
+```

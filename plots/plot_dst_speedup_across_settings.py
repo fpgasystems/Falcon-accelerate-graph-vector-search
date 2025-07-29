@@ -20,6 +20,8 @@ import seaborn as sns
 # plt.style.use('seaborn-pastel') 
 # plt.style.use('seaborn-colorblind') 
 
+plt.rcParams['pdf.fonttype'] = 42
+
 sns.set_theme(style="whitegrid")
 # sns.set_palette("Paired")
 # sns.set_palette("Set2")
@@ -71,7 +73,9 @@ def get_recall_improvement(df, graph_type, dataset, max_degree, ef, k=10):
 def plot_speedup(df, graph_type="HNSW", datasets=['SIFT10M', 'Deep10M'], max_degrees=[16, 32, 64], ef=64, suffix='inter_query'):
 
     # get three subplots, horizontally 
-    fig, ax = plt.subplots(1, 1, figsize=(4, 1.2))
+    # fig, ax = plt.subplots(1, 1, figsize=(4, 1.2))
+    # for paper, small:
+    fig, ax = plt.subplots(1, 1, figsize=(4, 0.8))
 
     label_font = 13
     markersize = 10
@@ -135,7 +139,9 @@ def plot_speedup_all_subplots(dfs, graph_types=["HNSW", "NSG"], datasets=['SIFT1
     n_graphs = len(graph_types)
 
     # get three subplots, horizontally 
-    fig, axs = plt.subplots(n_dfs, n_graphs, figsize=(4 * n_graphs, 2.0 * n_dfs), sharex=True, sharey=True)
+    # fig, axs = plt.subplots(n_dfs, n_graphs, figsize=(4 * n_graphs, 2.0 * n_dfs), sharex=True, sharey=True)
+    # for paper, small:
+    fig, axs = plt.subplots(n_dfs, n_graphs, figsize=(4 * n_graphs, 1.2 * n_dfs), sharex=True, sharey=True)
 
     # reshape axs into 2D array, in (n_dfs, n_graphs)
     if n_graphs == 1 and n_dfs == 1:
